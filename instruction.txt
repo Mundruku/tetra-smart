@@ -1,0 +1,7 @@
+
+1. In your project directory, open the commandline and enter composer require, to install the composer packages 
+1. create a DB_DATABASE
+2. create .env file in the root directory of the file
+3. add the database name you created in the .env file you created in step  2 above
+4.open the commandline, Cd into the  directory and enter php artisan migrate
+5. php artisan serve and use the url to check the site.
