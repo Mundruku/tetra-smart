@@ -17,11 +17,11 @@
         <link rel="stylesheet" href="{{ asset('user/css/simple-line-icons.css') }}">
         <link rel="stylesheet" href="{{ asset('user/css/owl.carousel.css') }}">
         <link rel="stylesheet" href="{{ asset('user/css/owl.theme.css') }}">
-          <link rel="stylesheet" href="{{ asset('user/css/jquery.bxslider.css') }}">
-           <link rel="stylesheet" href="{{ asset('user/css/flexslider.css') }}">
-            <link rel="stylesheet" href="{{ asset('user/css/color-swatch.css') }}">
+        <link rel="stylesheet" href="{{ asset('user/css/jquery.bxslider.css') }}">
+        <link rel="stylesheet" href="{{ asset('user/css/flexslider.css') }}">
+        <link rel="stylesheet" href="{{ asset('user/css/color-swatch.css') }}">
 
-          <link rel="stylesheet" href="{{ asset('user/css/scrollingcart/scroll.css') }}">
+        <link rel="stylesheet" href="{{ asset('user/css/scrollingcart/scroll.css') }}">
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway:300,400,500,700,600" />
         <link rel="icon" href="http://mas1.magikthemes.com/skin/frontend/base/default/favicon.ico" type="image/x-icon" />
 <link rel="shortcut icon" href="http://mas1.magikthemes.com/skin/frontend/base/default/favicon.ico" type="image/x-icon" />
@@ -34,9 +34,11 @@
     </head>
     <body class="  cms-index-index cms-bolt-home-one ">
       @include('layouts.user.header')
-
+      
       @include('layouts.user.header2')
 
-    
+      @include('layouts.user.scripts')
+     
+
     </body>
 </html>
