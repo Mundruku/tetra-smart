@@ -1,5 +1,5 @@
- <script src="{{ asset('user/js/jquery.min.js') }}"></script>
-      <script src="{{ asset('user/js/bootstrap.min.js') }}"></script>
+<script src="{{asset('user/js/revslider.js')}}" type="text/javascript"></script>
+<script src="{{asset('user/js/common.js')}}" type="text/javascript"></script>
   <script type="text/javascript" src="{{asset('user/js/lib/modernizr.custom.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('user/js/lib/selectivizr.js')}}"></script>
 <script type="text/javascript" src="{{asset('user/js/lib/matchMedia.js')}}"></script>
@@ -21,7 +21,7 @@
 <script type="text/javascript" src="{{asset('user/js/jquery.bxslider.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('user/js/jquery.flexslider.js')}}"></script>
 <script type="text/javascript" src="{{asset('user/js/owl.carousel.min.js')}}"></script>
-<script type="text/javascript" src="{{asset('user/js/jquery.mobile-menu.min.js')}}"></script>
+
 
 
 
@@ -47,8 +47,7 @@
 <script type="text/javascript" src="{{asset('user/calendar/calendar.js')}}"></script>
 <script type="text/javascript" src="{{asset('user/calendar/calendar-setup.js')}}"></script>
 
-<script src="{{asset('user/js/revslider.js')}}" type="text/javascript"></script>
-<script src="{{asset('user/js/common.js')}}" type="text/javascript"></script>
+
 
 
 
