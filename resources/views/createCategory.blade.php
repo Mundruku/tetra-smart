@@ -16,7 +16,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Create Category</h1>
+            <h1>Category</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -35,7 +35,7 @@
         <!-- SELECT2 EXAMPLE -->
         <div class="card card-default">
           <div class="card-header">
-            <h3 class="card-title">Category</h3>
+            <h3 class="card-title">Create Category</h3>
 
             <div class="card-tools">
               <button type="button" class="btn btn-tool" data-card-widget="collapse">
@@ -55,52 +55,16 @@
                   <input class="form-control" type="text" placeholder="Name">
                   
                 </div>
-                <!-- /.form-group -->
-                <div class="form-group">
-                  <label>Select</label>
-                  <select class="form-control select2bs4" style="width: 100%;">
-                    <option selected="selected">Alabama</option>
-                    <option>Alaska</option>
-                    <option>California</option>
-                    <option>Delaware</option>
-                    <option>Tennessee</option>
-                    <option>Texas</option>
-                    <option>Washington</option>
-                  </select>
-                </div>
-                <!-- /.form-group -->
 
-                 <!-- Date -->
-                 <div class="form-group">
-                  <label>Date:</label>
-                    <div class="input-group date" id="reservationdate" data-target-input="nearest">
-                        <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
-                            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-                        </div>
-
-                        <input type="text" class="form-control datetimepicker-input" data-target="#reservationdate"/>
-                    </div>
-                </div>
 
               </div>
               <!-- /.col -->
               <div class="col-md-6">
                 <div class="form-group">
                   <label>Image</label>
-                  <input type="text" class="form-control" placeholder="Image">
+                  <input type="file" class="form-control" placeholder="Image">
                 </div>
-                <!-- /.form-group -->
-                <div class="form-group">
-                  <label>Phone</label>
 
-                  <div class="input-group">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text"><i class="fas fa-phone"></i></span>
-                    </div>
-                    <input type="text" class="form-control" data-inputmask='"mask": "(256) 999-999999"' data-mask>
-                  
-                </div>
-                <!-- /.form-group -->
               </div>
               <!-- /.col -->
             </div>

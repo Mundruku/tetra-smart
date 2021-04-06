@@ -12,7 +12,7 @@ class DashboardController extends Controller
         return view('dashboard');
     }
 
-    public function createCategory(){
-        return view('createCategory');
-    }
+    // public function createCategory(){
+    //     return view('createCategory');
+    // }
 }

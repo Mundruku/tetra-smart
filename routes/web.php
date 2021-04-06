@@ -21,4 +21,4 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
-Route::get('/createCategory', [App\Http\Controllers\DashboardController::class, 'createCategory'])->name('createCategory');
+Route::get('/category', [App\Http\Controllers\CategoryController::class, 'index'])->name('category');
