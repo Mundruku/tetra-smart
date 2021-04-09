@@ -9,6 +9,7 @@
 @include('layouts.user.dashbordSideMenu')
 
 
+
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -33,7 +34,7 @@
       <div class="container-fluid">
 
         <!-- SELECT2 EXAMPLE -->
-        <form action="create" method="POST" >
+        <form action="/store" method="POST" >
         <div class="card card-default">
           <div class="card-header">
             <h3 class="card-title">Create Category</h3>
@@ -99,6 +100,10 @@
             <!-- Visit <a href="https://select2.github.io/">Select2 documentation</a> for more examples and information about
             the plugin. -->
             <button type="submit" class="btn btn-success float-right">Submit</button>
+
+            <!-- @foreach ($category as $cat)
+              <p>{{$cat->name}}</p>
+            @endforeach -->
             
           </div>
         </div>
