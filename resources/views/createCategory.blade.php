@@ -33,6 +33,7 @@
       <div class="container-fluid">
 
         <!-- SELECT2 EXAMPLE -->
+        <form action="create" method="POST" >
         <div class="card card-default">
           <div class="card-header">
             <h3 class="card-title">Create Category</h3>
@@ -49,10 +50,11 @@
           <!-- /.card-header -->
           <div class="card-body">
             <div class="row">
+            
               <div class="col-md-6">
                 <div class="form-group">
                   <label>Name</label>
-                  <input class="form-control" type="text" placeholder="Name">
+                  <input class="form-control" name="name" type="text" placeholder="Name">
                   
                 </div>
 
@@ -62,7 +64,7 @@
               <div class="col-md-6">
                 <div class="form-group">
                   <label>Image</label>
-                  <input type="file" class="form-control" placeholder="Image">
+                  <input type="file" class="form-control" name="image" placeholder="Image">
                 </div>
 
               </div>
@@ -89,6 +91,7 @@
               </div>
               <!-- /.col -->
             </div>
+            
             <!-- /.row -->
           </div>
           <!-- /.card-body -->
@@ -96,9 +99,10 @@
             <!-- Visit <a href="https://select2.github.io/">Select2 documentation</a> for more examples and information about
             the plugin. -->
             <button type="submit" class="btn btn-success float-right">Submit</button>
-
+            
           </div>
         </div>
+        </form>
         <!-- /.card -->
 
        
