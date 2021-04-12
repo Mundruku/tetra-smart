@@ -42,6 +42,7 @@ class CategoryController extends Controller
         ]);
         $category = new Category;
         $category->name = $request->input('name');
+        $category->image='http';
         $category->save();
 
         return redirect('/category')->with('success', 'Category created successfully');

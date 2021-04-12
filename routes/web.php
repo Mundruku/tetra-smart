@@ -23,4 +23,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
 Route::get('/category', [App\Http\Controllers\CategoryController::class, 'index'])->name('category');
 Route::get('/sub-category', [App\Http\Controllers\SubCategoryController::class, 'index'])->name('sub-category');
-Route::post('/store', [App\Http\Controllers\CategoryController::class], 'store')->name('store');
+Route::post('/store', "App\Http\Controllers\CategoryController@store")->name('store');
