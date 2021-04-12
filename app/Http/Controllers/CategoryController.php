@@ -14,7 +14,8 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        return view('createCategory');
+        $category = Category::all();
+        return view('category')->with('category', $category);
     }
 
     /**
@@ -25,6 +26,7 @@ class CategoryController extends Controller
     public function create()
     {
         //
+        return view('createCategory');
     }
 
     /**
@@ -35,7 +37,38 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // methods we can use on request
+        // guessExtension()
+        // getMimeTypes
+        // asStore()
+        // storePublicly()
+        // move()
+        // getClientOriginalName()
+        // getClientMimeType()
+        // guessClientExtension()
+        // getSize()
+        // getError()
+        // isValid()
+
+         // $test = $request->file('images')->guessExtension();
+
+
+
+        $this->validate($request, [
+            'name' => 'required',
+            'image'=>'required|mimes:jpeg,png,jpg|max:5048',
+        ]);
+
+        $newImageName = time(). '-' . $request->name.'.'. $request->image->extension();
+        
+        $request->image->move(public_path('images/category'), $newImageName);
+
+        $category = new Category;
+        $category->name = $request->input('name');
+        $category->image = $newImageName;
+        $category->save();
+
+        return redirect('/category')->with('success', 'Category created successfully');
     }
 
     /**

@@ -179,3 +179,5 @@
     </ul>
   </nav>
   <!-- /.navbar -->
+
+  @include('layouts.user.messages')

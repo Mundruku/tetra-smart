@@ -25,11 +25,14 @@ Auth::routes();
 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
+
+//admin dashboard  route
+Route::get('dashboard', [App\Http\Controllers\AdminController::class, 'index'])->name('dashboard');
+
+
+//Category routes for the admin
 Route::get('/category', [App\Http\Controllers\CategoryController::class, 'index'])->name('category');
 Route::get('/sub-category', [App\Http\Controllers\SubCategoryController::class, 'index'])->name('sub-category');
-
-
 
 
 
