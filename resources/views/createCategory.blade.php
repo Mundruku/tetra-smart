@@ -34,7 +34,7 @@
       <div class="container-fluid">
 
         <!-- SELECT2 EXAMPLE -->
-        <form action="/store" method="POST" >
+        <form action="/store" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="card card-default">
           <div class="card-header">
@@ -66,7 +66,7 @@
               <div class="col-md-6">
                 <div class="form-group">
                   <label>Image</label>
-                  <input type="file" class="form-control" name="image" placeholder="Image">
+                  <input type="file" class="form-control" name="image" >
                 </div>
 
               </div>
@@ -102,9 +102,7 @@
             the plugin. -->
             <button type="submit" class="btn btn-success float-right">Submit</button>
 
-            <!-- @foreach ($category as $cat)
-              <p>{{$cat->name}}</p>
-            @endforeach -->
+
             
           </div>
         </div>
