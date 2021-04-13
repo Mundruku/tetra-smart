@@ -13,6 +13,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        // $this->call(UsersTableSeeder::class);
+        \DB::table('users')->insert([
+            'name' => 'admin',
+            'email' =>'info@tetrasmart.com',
+            'password' => bcrypt('admin'),
+            'user_type' => 'admin',
+            
+        ]);
     }
 }

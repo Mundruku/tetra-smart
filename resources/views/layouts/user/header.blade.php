@@ -13,10 +13,10 @@
  <!-- For version 1,2,3 --> 
 
  <div class="dropdown block-language-wrapper">
-    <a href="#" class="block-language dropdown-toggle" data-target="#" data-toggle="dropdown" role="button"> <img src="{{ asset('user/images//flags/bolt.png') }}"  alt="bolt"/> English <span class="caret"></span> </a> 
+    <a href="{{ route('logout') }}" class="block-language dropdown-toggle" data-target="#" data-toggle="dropdown" role="button"> <img src="{{ asset('user/images//flags/bolt.png') }}"  alt="bolt"/> English <span class="caret"></span> </a> 
    <ul role="menu" class="dropdown-menu">        
                
-            <li role="presentation"><a href="indexad03.html?___from_store=bolt" tabindex="-1" role="menuitem">
+            <li role="presentation"><a  href="{{ route('admin.logout') }}"  tabindex="-1" role="menuitem">
                <img  src="{{ asset('user/images//flags/bolt.png') }}"  alt="English" />
                English            </a></li>         
                

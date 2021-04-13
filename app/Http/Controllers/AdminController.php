@@ -3,22 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+
 
 class AdminController extends Controller
 {
     //
 
 
-/**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct() {
 
-        $this->middleware('auth:admin');
-
-    }
 
 
     // 
@@ -30,6 +23,27 @@ class AdminController extends Controller
 
         return view('dashboard');
     }
+
+//Admin show login form function
+
+
+public function show_login(Request $request){
+
+     if(Auth::user()){
+         return view('dashboard');
+     }
+     else
+     {
+         return view('auth.admin_login');
+     }
+}
+
+//Admin logout function
+
+public function logout(Request $request){
+     Auth::logout();
+    return redirect('/admin');
+}
 
     
 }
