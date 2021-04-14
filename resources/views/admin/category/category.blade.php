@@ -4,10 +4,10 @@
 <!-- content -->
 
 
-@include('layouts.user.dashbordHeader')
+@include('layouts.admin.dashbordHeader')
 
 
-@include('layouts.user.dashbordSideMenu')
+@include('layouts.admin.dashbordSideMenu')
 
 
 
@@ -140,7 +140,7 @@
 
 
 
-@include('layouts.user.dashbordFooter')
+@include('layouts.admin.dashbordFooter')
 
 
 <!-- /content -->

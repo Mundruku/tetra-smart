@@ -35,6 +35,17 @@ Route::group(['middleware'=>['auth', 'admin']], function() {
     //Category routes for the admin
     Route::get('/category', [App\Http\Controllers\CategoryController::class, 'index'])->name('category');
     Route::get('/sub-category', [App\Http\Controllers\SubCategoryController::class, 'index'])->name('sub-category');
+
+
+
+Route::get('/create-category', [App\Http\Controllers\CategoryController::class, 'create'])->name('create_category');
+Route::get('/category-details', [App\Http\Controllers\CategoryController::class, 'show'])->name('category-details');
+
+Route::post('/store', "App\Http\Controllers\CategoryController@store")->name('store');
+
+    //Product routes 
+
+    Route::get('create-product', [App\Http\Controllers\AdminController::class, 'create_product'])->name('product_create');
     
 });
 

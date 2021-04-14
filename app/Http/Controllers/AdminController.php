@@ -45,5 +45,14 @@ public function logout(Request $request){
     return redirect('/admin');
 }
 
+
+
+
+//Product create view function
+public function create_product(Request $request){
+
+    return view('admin.product.create');
+}
+
     
 }

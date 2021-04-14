@@ -15,7 +15,7 @@ class CategoryController extends Controller
     public function index()
     {
         $category = Category::all();
-        return view('category')->with('category', $category);
+        return view('admin.category.category')->with('category', $category);
     }
 
     /**
@@ -26,7 +26,7 @@ class CategoryController extends Controller
     public function create()
     {
         //
-        return view('createCategory');
+        return view('admin.category.createCategory');
     }
 
     /**
@@ -80,6 +80,7 @@ class CategoryController extends Controller
     public function show(Category $category)
     {
         //
+        return view('admin.category.categoryDetails');
     }
 
     /**

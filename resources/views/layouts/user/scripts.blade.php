@@ -1,4 +1,4 @@
-<script src="{{asset('user/js/revslider.js')}}" type="text/javascript"></script>
+
 <script src="{{asset('user/js/common.js')}}" type="text/javascript"></script>
   <script type="text/javascript" src="{{asset('user/js/lib/modernizr.custom.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('user/js/lib/selectivizr.js')}}"></script>
