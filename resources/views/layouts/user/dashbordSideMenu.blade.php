@@ -65,13 +65,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/layout/top-nav.html" class="nav-link">
+                <a href="/create-category" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Add Category</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
+                <a href="/category" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>View Category</p>
                 </a>
@@ -89,13 +89,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/charts/chartjs.html" class="nav-link">
+                <a href="/create-sub-category" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Add Sub Categories</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/charts/flot.html" class="nav-link">
+                <a href="/sub-category" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>View Sub categories</p>
                 </a>

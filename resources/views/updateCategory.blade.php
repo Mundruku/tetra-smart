@@ -1,13 +1,8 @@
 
-
-<!-- content -->
-
-
 @include('layouts.user.dashbordHeader')
 
 
 @include('layouts.user.dashbordSideMenu')
-
 
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -16,12 +11,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Sub Category</h1>
+            <h1>Category</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Create Sub Category</li>
+              <li class="breadcrumb-item active">Edit Category</li>
             </ol>
           </div>
         </div>
@@ -33,11 +28,15 @@
       <div class="container-fluid">
 
         <!-- SELECT2 EXAMPLE -->
-        <form action="/submit_subcategory" method="POST" enctype="multipart/form-data">
+        <form action="/update-category/{{$category->id}}" method="POST" enctype="multipart/form-data">
         @csrf
+
+        <input type="hidden" name="_method" value="PUT">
+
+        
         <div class="card card-default">
           <div class="card-header">
-            <h3 class="card-title">Create Sub Category</h3>
+            <h3 class="card-title">Edit Category</h3>
 
             <div class="card-tools">
               <button type="button" class="btn btn-tool" data-card-widget="collapse">
@@ -51,20 +50,12 @@
           <!-- /.card-header -->
           <div class="card-body">
             <div class="row">
+            
               <div class="col-md-6">
                 <div class="form-group">
                   <label>Name</label>
-                  <input class="form-control" type="text" name="name" placeholder="Name">
+                  <input class="form-control" name="name" type="text" value="{{$category->name}}" placeholder="Name">
                   
-                </div>
-
-                <div class="form-group">
-                  <label>Category</label>
-                  <select class="form-control select2" name="category_id" placeholder="Category" style="width: 100%;">
-                    @foreach($category as $cat)
-                    <option value="{{$cat->id}}">{{$cat->name}}</option>
-                    @endforeach
-                  </select>
                 </div>
 
 
@@ -73,7 +64,8 @@
               <div class="col-md-6">
                 <div class="form-group">
                   <label>Image</label>
-                  <input type="file" class="form-control" name="image" >
+                  <input type="file"  class="form-control" name="image" >
+                  <!-- <img class="img img-responsive" height="200" src="{{ asset('images/category/'.$category->image)}}" > -->
                 </div>
 
               </div>
@@ -100,6 +92,7 @@
               </div>
               <!-- /.col -->
             </div>
+            
             <!-- /.row -->
           </div>
           <!-- /.card-body -->
@@ -108,8 +101,11 @@
             the plugin. -->
             <button type="submit" class="btn btn-success float-right">Submit</button>
 
+
+            
           </div>
         </div>
+     
         </form>
         <!-- /.card -->
 
@@ -126,11 +122,4 @@
   <!-- /.content-wrapper -->
 
 
-
-
 @include('layouts.user.dashbordFooter')
-
-
-<!-- /content -->
-
- 
