@@ -68,7 +68,7 @@ class CategoryController extends Controller
         $category->image = $newImageName;
         $category->save();
 
-        return redirect('/category')->with('success', 'Category created successfully');
+        return redirect('admin/category')->with('success', 'Category created successfully');
     }
 
     /**

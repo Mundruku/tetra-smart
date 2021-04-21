@@ -41,11 +41,12 @@ Route::group(['middleware'=>['auth', 'admin']], function() {
 Route::get('/create-category', [App\Http\Controllers\CategoryController::class, 'create'])->name('create_category');
 Route::get('/category-details', [App\Http\Controllers\CategoryController::class, 'show'])->name('category-details');
 
-Route::post('/store', "App\Http\Controllers\CategoryController@store")->name('store');
+Route::post('/store', "App\Http\Controllers\CategoryController@store")->name('category.store');
 
     //Product routes 
 
-    Route::get('create-product', [App\Http\Controllers\AdminController::class, 'create_product'])->name('product_create');
+ Route::get('create-product', [App\Http\Controllers\AdminController::class, 'create_product'])->name('product_create');
+ Route::post('create-product', [App\Http\Controllers\AdminController::class, 'product_save'])->name('product.save');
     
 });
 

@@ -34,7 +34,7 @@
       <div class="container-fluid">
 
         <!-- SELECT2 EXAMPLE -->
-        <form action="/store" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('admin.category.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="card card-default">
           <div class="card-header">

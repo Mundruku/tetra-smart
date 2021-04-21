@@ -1,4 +1,6 @@
+<form action="{{ route('admin.product.save') }}" method="POST" enctype="multipart/form-data">
 <!-- Main content -->
+  @csrf
 <section class="content">
       <div class="container-fluid">
 
@@ -26,7 +28,10 @@
                   
                 </div>
 
-                <div class="form-group">
+              </div>
+              <!-- /.col -->
+                <div class="col-md-6">
+               <div class="form-group">
                   <label>Category</label>
                   <select class="form-control select2" style="width: 100%;">
                     <option selected="selected">Alabama</option>
@@ -38,10 +43,23 @@
                     <option>Washington</option>
                   </select>
                 </div>
+                  </div>
 
+                <div class="col-md-6">
+               <div class="form-group">
+                  <label>Sub Category</label>
+                  <select class="form-control select2" style="width: 100%;">
+                    <option selected="selected">Alabama</option>
+                    <option>Alaska</option>
+                    <option>California</option>
+                    <option>Delaware</option>
+                    <option>Tennessee</option>
+                    <option>Texas</option>
+                    <option>Washington</option>
+                  </select>
+                </div>
+                  </div>
 
-              </div>
-              <!-- /.col -->
               <div class="col-md-6">
                 <div class="form-group">
                   <label>phone Image</label>
@@ -88,3 +106,4 @@
       <!-- /.container-fluid -->
     </section>
     <!-- /.content -->
+    </form>
