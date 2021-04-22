@@ -4,10 +4,10 @@
 <!-- content -->
 
 
-@include('layouts.admin.dashbordHeader')
+@include('layouts.user.dashbordHeader')
 
 
-@include('layouts.admin.dashbordSideMenu')
+@include('layouts.user.dashbordSideMenu')
 
 
 
@@ -19,12 +19,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Category</h1>
+            <h1>Sub Category</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Category</li>
+              <li class="breadcrumb-item active">Sub Category</li>
             </ol>
           </div>
         </div>
@@ -37,7 +37,7 @@
       <!-- Default box -->
       <div class="card">
         <div class="card-header">
-          <h3 class="card-title">Category</h3>
+          <h3 class="card-title">Sub Category</h3>
 
           <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -61,9 +61,9 @@
                       <th style="width: 30%">
                         Image
                       </th>
-                      <!-- <th>
-                        Description
-                      </th> -->
+                      <th>
+                        Category
+                      </th>
                       <th style="width: 8%" class="text-center">
                           Status
                       </th>
@@ -72,53 +72,47 @@
                   </tr>
               </thead>
               <tbody>
-        @foreach ($category as $cat) 
+        @foreach ($subCategory as $sub_cat) 
                   <tr>
                       <td>
                           #
                       </td>
                       <td>
                           <a>
-                          {{$cat->name}}
+                          {{$sub_cat->name}}
                               <!-- AdminLTE v3 -->
                           </a>
                           <br/>
                           <small>
                               <!-- Created 01.01.2019 -->
-                              {{$cat->created_at}}
+                              {{$sub_cat->created_at}}
                           </small>
                       </td>
                       <td>
                           <ul class="list-inline">
                               <li class="list-inline-item">
-                                  <img alt="Avatar" class="table-avatar" src="{{ asset('images/category/'.$cat->image) }}">
+                                  <img alt="Avatar" class="table-avatar" src="{{ asset('images/sub_category/'.$sub_cat->image) }}">
                               </li>
                           </ul>
                       </td>
-                      <!-- <td class="project_progress">
-                          <div class="progress progress-sm">
-                              <div class="progress-bar bg-green" role="progressbar" aria-valuenow="57" aria-valuemin="0" aria-valuemax="100" style="width: 57%">
-                              </div>
-                          </div>
-                          <small>
-                              57% Complete
-                          </small>
-                      </td> -->
+                      <td class="project_progress">
+                              {{$sub_cat->category}}</>
+                      </td>
                       <td class="project-state">
                           <span class="badge badge-success">Active</span>
                       </td>
                       <td class="project-actions text-right">
-                          <a class="btn btn-primary btn-sm" href="/category-details/{{$cat->id}}">
+                          <a class="btn btn-primary btn-sm" href="/subcategory-details/{{$sub_cat->id}}">
                               <i class="fas fa-eye">
                               </i>
                               <!-- View -->
                           </a>
-                          <a class="btn btn-info btn-sm" href="/category/{{$cat->id}}">
+                          <a class="btn btn-info btn-sm" href="/sub-category/{{$sub_cat->id}}">
                               <i class="fas fa-pencil-alt">
                               </i>
                               <!-- Edit -->
                           </a>
-                          <a class="btn btn-danger btn-sm" href="/delete-category/{{$cat->id}}">
+                          <a class="btn btn-danger btn-sm" href="/delete-subcategory/{{$sub_cat->id}}">
                               <i class="fas fa-trash">
                               </i>
                               <!-- Delete -->
@@ -140,7 +134,7 @@
 
 
 
-@include('layouts.admin.dashbordFooter')
+@include('layouts.user.dashbordFooter')
 
 
 <!-- /content -->

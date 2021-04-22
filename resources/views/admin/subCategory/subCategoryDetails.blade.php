@@ -1,9 +1,9 @@
 
 
-@include('layouts.admin.dashbordHeader')
+@include('layouts.user.dashbordHeader')
 
 
-@include('layouts.admin.dashbordSideMenu')
+@include('layouts.user.dashbordSideMenu')
 
 
 
@@ -44,20 +44,21 @@
             </button>
           </div>
         </div>
+        @foreach ($subCategory as $subCategory) 
         <div class="card-body">
           <div class="row">
             <div class="col-12 col-md-12 col-lg-8 order-2 order-md-1">
 
               <div class="row">
                 <div class="col-12">
-                  <h4>{{$category->name}}</h4>
+                  <h4>{{$subCategory->name}}</h4>
                     <div class="post">
                       <div class="user-block">
                         <!-- <img class="img-circle img-bordered-sm" src="../../dist/img/user1-128x128.jpg" alt="user image"> -->
                         <span class="username">
-                          <!-- <a href="#">Jonathan Burke Jr.</a> -->
+                          <a >{{$subCategory->category}}</a>
                         </span>
-                        <span class="description">{{$category->created_at}}</span>
+                        <span class="description">{{$subCategory->created_at}}</span>
                       </div>
                       <!-- /.user-block -->
              
@@ -74,7 +75,7 @@
 
               <div class="col-md-12 col-lg-6 col-xl-4">
                 <div class="card mb-2 bg-gradient-dark">
-                  <img class="card-img-top" src="{{asset('images/category/'.$category->image) }}" >
+                  <img class="card-img-top" src="{{asset('images/sub_category/'.$subCategory->image) }}" >
                   <div class="card-img-overlay d-flex flex-column justify-content-end">
                     <!-- <h5 class="card-title text-primary text-white">Card Title</h5> -->
                     <!-- <p class="card-text text-white pb-2 pt-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor.</p> -->
@@ -84,14 +85,15 @@
               </div>
      
               <div class="text-center mt-5 mb-3">
-                <a href="/category/{{$category->id}}" class="btn btn-sm btn-primary">Edit</a>
-                <a href="/delete-category/{{$category->id}}" class="btn btn-sm btn-danger">Delete</a>
+                <a href="/sub-category/{{$subCategory->id}}" class="btn btn-sm btn-primary">Edit</a>
+                <a href="/delete-subcategory/{{$subCategory->id}}" class="btn btn-sm btn-danger">Delete</a>
               </div>
             </div>
           </div>
         </div>
         <!-- /.card-body -->
       </div>
+      @endforeach
       <!-- /.card -->
 
     </section>
@@ -99,4 +101,4 @@
   </div>
   <!-- /.content-wrapper -->
 
-  @include('layouts.admin.dashbordFooter')
+  @include('layouts.user.dashbordFooter')

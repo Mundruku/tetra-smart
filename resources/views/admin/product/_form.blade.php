@@ -4,6 +4,8 @@
 <section class="content">
       <div class="container-fluid">
 
+
+      <input type="hidden" name="product_id" value="{{$product!=null?$product->product_id:$product}}">
         <!-- SELECT2 EXAMPLE -->
         <div class="card card-default">
           <div class="card-header">
@@ -24,23 +26,26 @@
               <div class="col-md-6">
                 <div class="form-group">
                   <label>Phone Name</label>
-                  <input class="form-control" type="text" placeholder="Name">
+                  <input class="form-control" type="text" placeholder="Name" name="product_name" value="{{$product==null?old('product_name'):$product->product_name}}">
                   
                 </div>
 
               </div>
               <!-- /.col -->
+              
+
                 <div class="col-md-6">
                <div class="form-group">
                   <label>Category</label>
-                  <select class="form-control select2" style="width: 100%;">
-                    <option selected="selected">Alabama</option>
-                    <option>Alaska</option>
-                    <option>California</option>
-                    <option>Delaware</option>
-                    <option>Tennessee</option>
-                    <option>Texas</option>
-                    <option>Washington</option>
+                  <select name="category" class="form-control select2" style="width: 100%;">
+                    @if($product!=null)
+                    <option  value="{{$product->category_id}}">{{$product->category_name}}</option>
+                    @endif
+                    @foreach ($categories as $category)
+                    @if($product!=null && $product->category_id!=$category->id)
+                    <option  value="{{$category->id}}">{{$category->name}}</option>
+                    @endif
+                    @endforeach
                   </select>
                 </div>
                   </div>
@@ -48,22 +53,42 @@
                 <div class="col-md-6">
                <div class="form-group">
                   <label>Sub Category</label>
-                  <select class="form-control select2" style="width: 100%;">
-                    <option selected="selected">Alabama</option>
-                    <option>Alaska</option>
-                    <option>California</option>
-                    <option>Delaware</option>
-                    <option>Tennessee</option>
-                    <option>Texas</option>
-                    <option>Washington</option>
+                  <select name="sub_category" class="form-control select2" style="width: 100%;">
+                     @if($product!=null)
+                    <option  value="{{$product->sub_category_id}}">{{$product->sub_category_name}}</option>
+                    @endif
+                     @foreach ($sub_categories as $sub_category)
+                     @if($product!=null && $product->sub_category_id!=$sub_category->id)
+                    <option value="{{$sub_category->id}}">{{$sub_category->name}}</option>
+                    @endif
+                      @endforeach
                   </select>
                 </div>
                   </div>
 
+                  <div class="col-md-6">
+                <div class="form-group">
+                  <label>Normal Price</label>
+                  <input class="form-control" type="text" placeholder="Name" name="normal_price" value="{{$product==null?old('normal_price'):$product->price}}">
+                  
+                </div>
+
+
+              </div>
+
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>Purchase Price</label>
+                  <input class="form-control" type="text" placeholder="Name" name="purchase_price" value="{{$product==null?old('purchase_price'):$product->purchase_price}}">
+                  
+                </div>
+                
+              </div>
+
               <div class="col-md-6">
                 <div class="form-group">
                   <label>phone Image</label>
-                  <input type="file" class="form-control" placeholder="Image">
+                  <input type="file" class="form-control" placeholder="Image" name="picture">
                 </div>
 
               </div>

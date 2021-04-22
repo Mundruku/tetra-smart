@@ -1,14 +1,8 @@
 
-
-<!-- content -->
-
-
-@include('layouts.admin.dashbordHeader')
+@include('layouts.user.dashbordHeader')
 
 
-@include('layouts.admin.dashbordSideMenu')
-
-
+@include('layouts.user.dashbordSideMenu')
 
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -22,7 +16,7 @@
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Create Category</li>
+              <li class="breadcrumb-item active">Edit Category</li>
             </ol>
           </div>
         </div>
@@ -34,11 +28,15 @@
       <div class="container-fluid">
 
         <!-- SELECT2 EXAMPLE -->
-        <form action="{{route('admin.category.store') }}" method="POST" enctype="multipart/form-data">
+        <form action="/update-category/{{$category->id}}" method="POST" enctype="multipart/form-data">
         @csrf
+
+        <input type="hidden" name="_method" value="PUT">
+
+        
         <div class="card card-default">
           <div class="card-header">
-            <h3 class="card-title">Create Category</h3>
+            <h3 class="card-title">Edit Category</h3>
 
             <div class="card-tools">
               <button type="button" class="btn btn-tool" data-card-widget="collapse">
@@ -56,7 +54,7 @@
               <div class="col-md-6">
                 <div class="form-group">
                   <label>Name</label>
-                  <input class="form-control" name="name" type="text" placeholder="Name">
+                  <input class="form-control" name="name" type="text" value="{{$category->name}}" placeholder="Name">
                   
                 </div>
 
@@ -66,7 +64,8 @@
               <div class="col-md-6">
                 <div class="form-group">
                   <label>Image</label>
-                  <input type="file" class="form-control" name="image" >
+                  <input type="file"  class="form-control" name="image" >
+                  <!-- <img class="img img-responsive" height="200" src="{{ asset('images/category/'.$category->image)}}" > -->
                 </div>
 
               </div>
@@ -106,6 +105,7 @@
             
           </div>
         </div>
+     
         </form>
         <!-- /.card -->
 
@@ -122,11 +122,4 @@
   <!-- /.content-wrapper -->
 
 
-
-
-@include('layouts.admin.dashbordFooter')
-
-
-<!-- /content -->
-
- 
+@include('layouts.user.dashbordFooter')

@@ -71,7 +71,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{ route('admin.category-details') }}" class="nav-link">
+                <a href="{{ route('admin.category') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>View Category</p>
                 </a>
@@ -89,13 +89,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{{ route('admin.sub-category') }}" class="nav-link">
+                <a href="{{ route('admin.create-sub-category') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Add Sub Categories</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/charts/flot.html" class="nav-link">
+                <a href="/sub-category" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>View Sub categories</p>
                 </a>
@@ -119,7 +119,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/UI/icons.html" class="nav-link">
+                <a href="{{route('admin.product.view')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>View Products</p>
                 </a>

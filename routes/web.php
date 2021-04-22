@@ -40,13 +40,31 @@ Route::group(['middleware'=>['auth', 'admin']], function() {
 
 Route::get('/create-category', [App\Http\Controllers\CategoryController::class, 'create'])->name('create_category');
 Route::get('/category-details', [App\Http\Controllers\CategoryController::class, 'show'])->name('category-details');
+Route::get('/category', [App\Http\Controllers\CategoryController::class, 'index'])->name('category');
+Route::post('category/store', "App\Http\Controllers\CategoryController@store")->name('category.store');
+Route::put('/update-category/{category}', [App\Http\Controllers\CategoryController::class, 'update'])->name('category-update');
+Route::get('/delete-category/{category}', [App\Http\Controllers\CategoryController::class, 'destroy'])->name('category-destroy');
 
-Route::post('/store', "App\Http\Controllers\CategoryController@store")->name('category.store');
 
-    //Product routes 
+//Route::get('/category-details/{category}', [App\Http\Controllers\CategoryController::class, 'show'])->name('category-details');
+Route::get('/sub-category', [App\Http\Controllers\SubCategoryController::class, 'index'])->name('sub-category');
+Route::get('/category/{category}', [App\Http\Controllers\CategoryController::class, 'edit'])->name('category-edit');
 
+Route::post('subcategory/store', "App\Http\Controllers\CategoryController@store")->name('store');
+
+Route::get('/create-sub-category', [App\Http\Controllers\SubCategoryController::class, 'create'])->name('create-sub-category');
+
+Route::post('/submit_subcategory', "App\Http\Controllers\SubCategoryController@store")->name('submit_subcategory');
+Route::get('/subcategory-details/{subCategory}', [App\Http\Controllers\SubCategoryController::class, 'show'])->name('subcategory-details');
+Route::get('/delete-subcategory/{subCategory}', [App\Http\Controllers\SubCategoryController::class, 'destroy'])->name('delete-subcategory');
+Route::get('/sub-category/{subCategory}', [App\Http\Controllers\SubCategoryController::class, 'edit'])->name('edit-sub-category');
+
+ //Product routes 
+ Route::get('product-view', [App\Http\Controllers\AdminController::class, 'product_view'])->name('product.view');
  Route::get('create-product', [App\Http\Controllers\AdminController::class, 'create_product'])->name('product_create');
  Route::post('create-product', [App\Http\Controllers\AdminController::class, 'product_save'])->name('product.save');
+ Route::get('edit-product/{id}', [App\Http\Controllers\AdminController::class, 'edit_product'])->name('product_edit');
+ Route::get('delete-product/{id}', [App\Http\Controllers\AdminController::class, 'delete_product'])->name('product_delete');
     
 });
 

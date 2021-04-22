@@ -33,6 +33,8 @@
       <div class="container-fluid">
 
         <!-- SELECT2 EXAMPLE -->
+        <form action="/submit_subcategory" method="POST" enctype="multipart/form-data">
+        @csrf
         <div class="card card-default">
           <div class="card-header">
             <h3 class="card-title">Create Sub Category</h3>
@@ -52,20 +54,16 @@
               <div class="col-md-6">
                 <div class="form-group">
                   <label>Name</label>
-                  <input class="form-control" type="text" placeholder="Name">
+                  <input class="form-control" type="text" name="name" placeholder="Name">
                   
                 </div>
 
                 <div class="form-group">
                   <label>Category</label>
-                  <select class="form-control select2" style="width: 100%;">
-                    <option selected="selected">Alabama</option>
-                    <option>Alaska</option>
-                    <option>California</option>
-                    <option>Delaware</option>
-                    <option>Tennessee</option>
-                    <option>Texas</option>
-                    <option>Washington</option>
+                  <select class="form-control select2" name="category_id" placeholder="Category" style="width: 100%;">
+                    @foreach($category as $cat)
+                    <option value="{{$cat->id}}">{{$cat->name}}</option>
+                    @endforeach
                   </select>
                 </div>
 
@@ -75,7 +73,7 @@
               <div class="col-md-6">
                 <div class="form-group">
                   <label>Image</label>
-                  <input type="file" class="form-control" placeholder="Image">
+                  <input type="file" class="form-control" name="image" >
                 </div>
 
               </div>
@@ -112,6 +110,7 @@
 
           </div>
         </div>
+        </form>
         <!-- /.card -->
 
        
