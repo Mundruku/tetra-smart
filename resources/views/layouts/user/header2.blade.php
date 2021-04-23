@@ -10,9 +10,8 @@
                              
                                   <li id="nav-home1" class="level0 parent drop-menu"><a href="index.html" class="level-top active"><span>Home</span></a>               
                     <ul class="level1" style="display: none;">
-<li class="level1 parent"><a href="../bolt.html"><span>Home Version 1</span></a></li>
-<li class="level1 parent"><a href="../boltdemo2.html"><span>Home Version 2</span></a></li>
-<li class="level1 parent"><a href="../boltdemo3.html"><span>Home Version 3</span></a></li>
+<li class="level1 parent"><a href="/"><span>Home</span></a></li>
+
 </ul>                  </li>
                 
               

@@ -74,7 +74,7 @@
 </ul>            </div>
             <!-- End Header Company -->
 
-                       <div class="login"><a href="customer/account/login/index.html" title="Log In"><span class="hidden-xs">Log In</span></a>
+                       <div class="login"><a href="{{ route('user.login.form') }}" title="Log In"><span class="hidden-xs">Log In</span></a>
              </div>
                                     
           </div><!--links-->

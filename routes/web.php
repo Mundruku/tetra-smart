@@ -88,11 +88,12 @@ Auth::routes();
 
 //Private routes for the user 
 
-
+Route::get('user-login-form', [App\Http\Controllers\UserController::class, 'user_login_form'])->name('user.login.form');
+Route::get('user-register-form', [App\Http\Controllers\UserController::class, 'user_register_form'])->name('user.register.form');
 
 Route::group(['middleware'=>['auth']], function(){
 
-
+     
     
 
 });
