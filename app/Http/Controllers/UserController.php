@@ -7,7 +7,11 @@ use Illuminate\Http\Request;
 class UserController extends Controller
 {
     
+   //welcome page
 
+   public function welcome_page(Request $request){
+      return view('welcome');
+   }
 
     //Show login form
 
@@ -25,4 +29,6 @@ class UserController extends Controller
        return view('auth.user_register');
 
     }
+
+   
 }

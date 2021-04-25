@@ -77,20 +77,16 @@ Route::get('/sub-category/{subCategory}', [App\Http\Controllers\SubCategoryContr
 
 //Public Route for the user 
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Auth::routes();
 
-
-
-
-//Private routes for the user 
+Route::get('/', [App\Http\Controllers\UserController::class, 'welcome_page'])->name('home.page');
 
 Route::get('user-login-form', [App\Http\Controllers\UserController::class, 'user_login_form'])->name('user.login.form');
 Route::get('user-register-form', [App\Http\Controllers\UserController::class, 'user_register_form'])->name('user.register.form');
 
+
+//Private routes for the user 
 Route::group(['middleware'=>['auth']], function(){
 
      
