@@ -53,6 +53,7 @@ Route::get('/category/{category}', [App\Http\Controllers\CategoryController::cla
 Route::post('subcategory/store', "App\Http\Controllers\CategoryController@store")->name('store');
 
 Route::get('/create-sub-category', [App\Http\Controllers\SubCategoryController::class, 'create'])->name('create-sub-category');
+Route::post('/store-sub-category', [App\Http\Controllers\SubCategoryController::class, 'store'])->name('store-sub-category');
 
 Route::post('/submit_subcategory', "App\Http\Controllers\SubCategoryController@store")->name('submit_subcategory');
 Route::get('/subcategory-details/{subCategory}', [App\Http\Controllers\SubCategoryController::class, 'show'])->name('subcategory-details');
@@ -65,7 +66,7 @@ Route::get('/sub-category/{subCategory}', [App\Http\Controllers\SubCategoryContr
  Route::post('create-product', [App\Http\Controllers\AdminController::class, 'product_save'])->name('product.save');
  Route::get('edit-product/{id}', [App\Http\Controllers\AdminController::class, 'edit_product'])->name('product_edit');
  Route::get('delete-product/{id}', [App\Http\Controllers\AdminController::class, 'delete_product'])->name('product_delete');
-    
+ Route::get('product-details/{id}', [App\Http\Controllers\AdminController::class, 'product_details'])->name('product_details');  
 });
 
 

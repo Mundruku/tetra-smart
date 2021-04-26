@@ -44,6 +44,8 @@
                     @foreach ($categories as $category)
                     @if($product!=null && $product->category_id!=$category->id)
                     <option  value="{{$category->id}}">{{$category->name}}</option>
+                    @else
+                    <option  value="{{$category->id}}">{{$category->name}}</option>
                     @endif
                     @endforeach
                   </select>
@@ -59,6 +61,8 @@
                     @endif
                      @foreach ($sub_categories as $sub_category)
                      @if($product!=null && $product->sub_category_id!=$sub_category->id)
+                    <option value="{{$sub_category->id}}">{{$sub_category->name}}</option>
+                    @else
                     <option value="{{$sub_category->id}}">{{$sub_category->name}}</option>
                     @endif
                       @endforeach
