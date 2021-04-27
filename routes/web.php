@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 
 
- Route::group(['as' => 'admin.', 'prefix' => 'admin'], function() {
+ Route::group(['as' => 'admin.', 'prefix' => 'admin', 'middleware'=>['admin']], function() {
 //Admin public route
 
 Route::get('/', [App\Http\Controllers\AdminController::class, 'show_login']);
@@ -90,7 +90,7 @@ Route::get('user-register-form', [App\Http\Controllers\UserController::class, 'u
 //Private routes for the user 
 Route::group(['middleware'=>['auth']], function(){
 
-     
+  Route::get('user/logout', [App\Http\Controllers\UserController::class, 'logout'])->name('user.logout');
     
 
 });

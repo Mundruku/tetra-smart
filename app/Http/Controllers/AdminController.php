@@ -33,7 +33,7 @@ class AdminController extends Controller
 
 public function show_login(Request $request){
 
-     if(Auth::user()){
+     if(Auth::user() ){
          return view('admin.dashboard');
      }
      else

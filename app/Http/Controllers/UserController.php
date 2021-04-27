@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Auth;
+
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -29,6 +31,13 @@ class UserController extends Controller
        return view('auth.user_register');
 
     }
+
+    //user logout function
+
+public function logout(Request $request){
+     Auth::logout();
+    return redirect('/');
+}
 
    
 }
