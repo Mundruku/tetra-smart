@@ -48,15 +48,11 @@
                                                      <a href="mob-smartphone/mob-samsung/galaxy-g7.html"><span>Galaxy
                                                              G7</span></a>
 
-
-
                                                  </li>
                                                  <!--level2 nav-6-1-1-->
                                                  <li class="level2 nav-6-1-1">
                                                      <a href="mob-smartphone/mob-samsung/sam-nexon.html"><span>Nexon J3
                                                              Pro</span></a>
-
-
 
                                                  </li>
                                                  <!--level2 nav-6-1-1-->
@@ -64,15 +60,11 @@
                                                      <a href="mob-smartphone/mob-samsung/sam-prime-gold.html"><span>Prime
                                                              Gold J2</span></a>
 
-
-
                                                  </li>
                                                  <!--level2 nav-6-1-1-->
                                                  <li class="level2 nav-6-1-1">
                                                      <a href="mob-smartphone/mob-samsung/mob-samsung-pro.html"><span>Samsung
                                                              M2 Pro</span></a>
-
-
 
                                                  </li>
                                                  <!--level2 nav-6-1-1-->
