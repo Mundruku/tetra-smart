@@ -62,6 +62,7 @@ class SubCategoryController extends Controller
         
         $sub_category->save();
         return redirect()->route('admin.sub-category');
+        // return redirect()->route('admin.subCategory.subCategory');
     }
 
     /**

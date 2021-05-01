@@ -84,7 +84,7 @@
                        {{$h+1}}
                       </td>
                       <td>
-                          <a>
+                          <a href="product-details/{{$product->id}}"> 
                           {{$product->product_name}}
                               <!-- AdminLTE v3 -->
                           </a>
@@ -129,7 +129,7 @@
                           <span class="badge badge-success">Active</span>
                       </td>
                       <td class="project-actions text-right">
-                          <a class="btn btn-primary btn-sm" href="admin/create/{{$product->id}}">
+                          <a class="btn btn-primary btn-sm" href="product-details/{{$product->id}}">
                               <i class="fas fa-eye">
                               </i>
                               <!-- View -->

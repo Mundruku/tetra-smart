@@ -16,7 +16,7 @@
     <a href="{{ route('logout') }}" class="block-language dropdown-toggle" data-target="#" data-toggle="dropdown" role="button"> <img src="{{ asset('user/images//flags/bolt.png') }}"  alt="bolt"/> English <span class="caret"></span> </a> 
    <ul role="menu" class="dropdown-menu">        
                
-            <li role="presentation"><a  href="{{ route('admin.logout') }}"  tabindex="-1" role="menuitem">
+            <li role="presentation"><a  href="{{ route('user.logout') }}"  tabindex="-1" role="menuitem">
                <img  src="{{ asset('user/images//flags/bolt.png') }}"  alt="English" />
                English            </a></li>         
                
@@ -51,7 +51,7 @@
 
  <!-- End for version 4 -->
 
-          <div class="welcome-msg">Default welcome msg!</div>
+          <div class="welcome-msg">welcome {{Auth::user()->name}}!</div>
         </div><!--col-xs-12 col-sm-6-->
         <div class="col-xs-6 hidden-xs">
          <div class="toplinks">
@@ -73,8 +73,12 @@
 <li role="presentation"><a title="Advanced Search" href="catalogsearch/advanced/index.html">Advanced Search </a></li>
 </ul>            </div>
             <!-- End Header Company -->
-
+                       @if (Auth::guest())
                        <div class="login"><a href="{{ route('user.login.form') }}" title="Log In"><span class="hidden-xs">Log In</span></a>
+                        @else
+                        <div class="login"><a href="{{ route('user.logout') }}" title="Log In"><span class="hidden-xs">Log out</span></a>
+                        @endif
+
              </div>
                                     
           </div><!--links-->

@@ -35,6 +35,7 @@
         <!-- SELECT2 EXAMPLE -->
         <!-- <form action="/submit_subcategory" method="POST" enctype="multipart/form-data"> -->
         <form action="{{route('admin.submit_subcategory') }}" method="POST"enctype="multipart/form-data">
+ 
         @csrf
         <div class="card card-default">
           <div class="card-header">

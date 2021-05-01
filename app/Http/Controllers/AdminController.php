@@ -33,7 +33,7 @@ class AdminController extends Controller
 
 public function show_login(Request $request){
 
-     if(Auth::user()){
+     if(Auth::user() ){
          return view('admin.dashboard');
      }
      else
@@ -59,7 +59,7 @@ public function create_product(Request $request){
 	$sub_categories=SubCategory::all();
 
     return view('admin.product.create')
-                ->with('product', null)
+              ->with('product', null)
                ->with('sub_categories', $sub_categories)
                ->with('categories', $categories);
 }
@@ -189,6 +189,18 @@ public function delete_product(Request $request, $id){
 	return  view('admin.product.index')->with('products', $product_details);
 	}
 }
+
+//Product detail view function 
+
+
+public function product_details(Request $request, $id){
+       $product=Product::find($id);
+    
+    return view('admin.product.view')->with('product', $product);
+
+}
+
+
 
 
 

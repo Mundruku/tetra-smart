@@ -19,6 +19,7 @@ class CreateProductsTable extends Migration
             $table->integer('sub_category_id');
             $table->string('product_name')->unique();
             $table->string('price');
+            $table->string('purchase_price');
             $table->string('picture_url');
             $table->timestamps();
         });
