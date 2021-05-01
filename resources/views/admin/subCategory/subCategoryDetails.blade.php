@@ -1,9 +1,9 @@
 
 
-@include('layouts.user.dashbordHeader')
+@include('layouts.admin.dashbordHeader')
 
 
-@include('layouts.user.dashbordSideMenu')
+@include('layouts.admin.dashbordSideMenu')
 
 
 
@@ -85,8 +85,8 @@
               </div>
      
               <div class="text-center mt-5 mb-3">
-                <a href="/sub-category/{{$subCategory->id}}" class="btn btn-sm btn-primary">Edit</a>
-                <a href="/delete-subcategory/{{$subCategory->id}}" class="btn btn-sm btn-danger">Delete</a>
+                <a href="/admin/sub-category/{{$subCategory->id}}" class="btn btn-sm btn-primary">Edit</a>
+                <a href="/admin/delete-subcategory/{{$subCategory->id}}" class="btn btn-sm btn-danger">Delete</a>
               </div>
             </div>
           </div>
@@ -101,4 +101,4 @@
   </div>
   <!-- /.content-wrapper -->
 
-  @include('layouts.user.dashbordFooter')
+  @include('layouts.admin.dashbordFooter')

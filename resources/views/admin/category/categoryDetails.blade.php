@@ -84,8 +84,8 @@
               </div>
      
               <div class="text-center mt-5 mb-3">
-                <a href="/category/{{$category->id}}" class="btn btn-sm btn-primary">Edit</a>
-                <a href="/delete-category/{{$category->id}}" class="btn btn-sm btn-danger">Delete</a>
+                <a href="/admin/category/{{$category->id}}" class="btn btn-sm btn-primary">Edit</a>
+                <a href="/admin/delete-category/{{$category->id}}" class="btn btn-sm btn-danger">Delete</a>
               </div>
             </div>
           </div>

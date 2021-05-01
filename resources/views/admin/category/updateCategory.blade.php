@@ -1,8 +1,8 @@
 
-@include('layouts.user.dashbordHeader')
+@include('layouts.admin.dashbordHeader')
 
 
-@include('layouts.user.dashbordSideMenu')
+@include('layouts.admin.dashbordSideMenu')
 
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -28,7 +28,7 @@
       <div class="container-fluid">
 
         <!-- SELECT2 EXAMPLE -->
-        <form action="/update-category/{{$category->id}}" method="POST" enctype="multipart/form-data">
+        <form action="/admin/update-category/{{$category->id}}" method="POST" enctype="multipart/form-data">
         @csrf
 
         <input type="hidden" name="_method" value="PUT">
@@ -122,4 +122,4 @@
   <!-- /.content-wrapper -->
 
 
-@include('layouts.user.dashbordFooter')
+@include('layouts.admin.dashbordFooter')
