@@ -68,7 +68,7 @@ class CategoryController extends Controller
         $category->image = $newImageName;
         $category->save();
 
-        return redirect('admin/category')->with('success', 'Category created successfully');
+        return redirect()->route('admin.category')->with('success', 'Category created successfully');
     }
 
     /**
@@ -94,7 +94,7 @@ class CategoryController extends Controller
     {
 
         $category = Category::find($category->id);
-        return view('updateCategory')->with('category', $category);
+        return view('admin.category.updateCategory')->with('category', $category);
     }
 
     /**
@@ -108,7 +108,9 @@ class CategoryController extends Controller
     {
         //
 
-        return $request;
+        // return $request;
+        return redirect()->route('admin.category');
+
     }
 
     /**
@@ -122,6 +124,6 @@ class CategoryController extends Controller
         //
         $category = Category::find($category->id);
         $category->delete();
-        return redirect()->route('category');
+        return redirect()->route('admin.category');
     }
 }
