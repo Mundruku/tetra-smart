@@ -144,7 +144,7 @@
         </div><!--mm-toggle-wrap-->
         <div class="logo">
            <!-- For version 1 --> 
-            <a href="index.html" title="Magento Commerce" ><div><img style="width:35%;" src="{{ asset('user/images/logo.jpeg') }}" alt="Bolt Store" /></div></a>
+            <a href="index.html" title="Magento Commerce" ><div><img style="width:35%;" src="{{ asset('user/images/tetra_smart4.png') }}" alt="Bolt Store" /></div></a>
                   </div><!--logo-->
       </div><!--col-lg-6 col-md-4 col-sm-4 col-xs-12 logo-block-->
       <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
