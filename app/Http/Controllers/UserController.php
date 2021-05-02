@@ -7,8 +7,11 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Category;
+use App\Models\Product;
+use App\Models\Cart;
 use App\Models\SubCategory;
 use Illuminate\Support\Facades\DB;
+use Session;
 
 class UserController extends Controller
 {
@@ -79,6 +82,19 @@ public function logout(Request $request){
      Auth::logout();
     return redirect('/');
 }
+
+   //Adding to cart session
+
+   public function add_to_cart(Request $request, $id){
+      $product=Product::find($id);
+      $existing_cart=Session::has('cart')?Session::get('cart'):null;
+
+      $cart=new Cart($existing_cart);
+      $cart->add_to_cart($product, $product->id);
+
+      $request->session()->put('cart', $cart);
+       return view('welcome');
+   }
 
    
 }

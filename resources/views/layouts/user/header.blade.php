@@ -50,8 +50,11 @@
 
 
  <!-- End for version 4 -->
-
-          <div class="welcome-msg">welcome {{Auth::user()->name}}!</div>
+ @if (Auth::guest())
+   <div class="welcome-msg">welcome to Tetrasmart!</div>
+  @else
+  <div class="welcome-msg">welcome {{Auth::user()->name}}!</div>
+  @endif
         </div><!--col-xs-12 col-sm-6-->
         <div class="col-xs-6 hidden-xs">
          <div class="toplinks">
@@ -141,7 +144,7 @@
         </div><!--mm-toggle-wrap-->
         <div class="logo">
            <!-- For version 1 --> 
-            <a href="index.html" title="Magento Commerce"><div><img  src="{{ asset('user/images/logo.png') }}" alt="Bolt Store" /></div></a>
+            <a href="index.html" title="Magento Commerce" ><div><img style="width:35%;" src="{{ asset('user/images/logo.jpeg') }}" alt="Bolt Store" /></div></a>
                   </div><!--logo-->
       </div><!--col-lg-6 col-md-4 col-sm-4 col-xs-12 logo-block-->
       <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
