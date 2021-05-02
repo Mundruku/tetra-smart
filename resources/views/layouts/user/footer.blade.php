@@ -92,7 +92,7 @@
    <div class="container">
     <div class="row">
        <!-- For version 1,2 --> 
-         <div style="text-align: center;"><a href="#"><img alt="logo" src="{{asset('user/images/footer-logo.png')}}" /> </a></div>
+         <div style="text-align: center;"><a href="#"><img style="width:20%;" alt="logo" src="{{asset('user/images/logo.jpeg')}}" /> </a></div>
 <address><i class="fa fa-map-marker">&nbsp;</i> 123 Main Street, Anytown, CA 12345 USA <i class="fa fa-mobile">&nbsp;</i><span> +(408) 394-7557</span> <i class="fa fa-envelope">&nbsp;</i><span> abc@example.com</span></address>          </div><!--row-->
    </div><!--container-->
   </div><!--footer-middle-->  
