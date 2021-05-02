@@ -118,6 +118,9 @@ Route::get('user-register-form', [App\Http\Controllers\UserController::class, 'u
 Route::group(['middleware'=>['auth']], function(){
 
   Route::get('user/logout', [App\Http\Controllers\UserController::class, 'logout'])->name('user.logout');
+
+
+  Route::get('add-to-cart/{id}', [App\Http\Controllers\UserController::class, 'add_to_cart'])->name('user.add.to.cart');
     
 
 });
