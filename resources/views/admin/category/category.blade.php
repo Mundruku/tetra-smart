@@ -108,17 +108,17 @@
                           <span class="badge badge-success">Active</span>
                       </td>
                       <td class="project-actions text-right">
-                          <a class="btn btn-primary btn-sm" href="/category-details/{{$cat->id}}">
+                          <a class="btn btn-primary btn-sm" href="/admin/category-details/{{$cat->id}}">
                               <i class="fas fa-eye">
                               </i>
                               <!-- View -->
                           </a>
-                          <a class="btn btn-info btn-sm" href="/category/{{$cat->id}}">
+                          <a class="btn btn-info btn-sm" href="/admin/category/{{$cat->id}}">
                               <i class="fas fa-pencil-alt">
                               </i>
                               <!-- Edit -->
                           </a>
-                          <a class="btn btn-danger btn-sm" href="/delete-category/{{$cat->id}}">
+                          <a class="btn btn-danger btn-sm" href="/admin/delete-category/{{$cat->id}}">
                               <i class="fas fa-trash">
                               </i>
                               <!-- Delete -->

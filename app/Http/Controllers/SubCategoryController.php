@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\SubCategory;
 use Illuminate\Http\Request;
 use App\Models\Category;
+use App\Models\User;
 use Illuminate\Support\Facades\DB;
 
 class SubCategoryController extends Controller
@@ -14,11 +15,11 @@ class SubCategoryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index() 
     {
         // $subCategory = SubCategory::all();
         $subCategory = DB::select('select sb.*, c.name as category from sub_categories sb inner join categories c on sb.category_id = c.id');
-        return view('admin.subCategory')->with('subCategory', $subCategory);
+        return view('admin.subCategory.subCategory')->with('subCategory', $subCategory);
     } 
 
     /**
@@ -56,10 +57,12 @@ class SubCategoryController extends Controller
         $sub_category->name = $request->input('name');
         $sub_category->image = $newImageName;
         $sub_category->category_id = $request->input('category_id');
-
+        
+        // return $sub_category;
         
         $sub_category->save();
-        return redirect()->route('admin.subCategory.subCategory');
+        return redirect()->route('admin.sub-category');
+        // return redirect()->route('admin.subCategory.subCategory');
     }
 
     /**
@@ -74,7 +77,7 @@ class SubCategoryController extends Controller
         $sub_category = DB::select('select sb.*, c.name as category from sub_categories sb inner join categories c on sb.category_id = c.id
                                     where sb.id = '.$subCategory->id );
 
-        return view('subCategoryDetails')->with('subCategory', $sub_category);
+        return view('admin.subCategory.subCategoryDetails')->with('subCategory', $sub_category);
     }
 
     /**
@@ -85,7 +88,7 @@ class SubCategoryController extends Controller
      */
     public function edit(SubCategory $subCategory)
     {
-        return view('updateSubCategory');
+        return view('admin.subCategory.updateSubCategory');
     }
 
     /**
@@ -109,7 +112,7 @@ class SubCategoryController extends Controller
     public function destroy(SubCategory $subCategory)
     {
         $subCategory->delete();
-        return redirect()->route('sub-category');
+        return redirect()->route('admin.sub-category');
      
     }
 }

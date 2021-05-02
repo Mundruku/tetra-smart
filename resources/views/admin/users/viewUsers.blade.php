@@ -19,12 +19,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Sub Category</h1>
+            <h1>Users</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Sub Category</li>
+              <li class="breadcrumb-item active">Users</li>
             </ol>
           </div>
         </div>
@@ -37,7 +37,7 @@
       <!-- Default box -->
       <div class="card">
         <div class="card-header">
-          <h3 class="card-title">Sub Category</h3>
+          <h3 class="card-title">View Users</h3>
 
           <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -59,60 +59,59 @@
                         Name
                       </th>
                       <th style="width: 30%">
-                        Image
+                        Email
                       </th>
                       <th>
-                        Category
+                        User Type
                       </th>
                       <th style="width: 8%" class="text-center">
                           Status
                       </th>
-                      <th style="width: 20%">
-                      </th>
+                      <!-- <th style="width: 20%">
+                      </th> -->
                   </tr>
               </thead>
               <tbody>
-        @foreach ($subCategory as $sub_cat) 
+        @foreach ($users as $user) 
                   <tr>
                       <td>
                           #
                       </td>
                       <td>
                           <a>
-                          {{$sub_cat->name}}
+                          {{$user->name}}
                               <!-- AdminLTE v3 -->
                           </a>
                           <br/>
                           <small>
                               <!-- Created 01.01.2019 -->
-                              {{$sub_cat->created_at}}
+                              {{$user->created_at}}
                           </small>
                       </td>
                       <td>
-                          <ul class="list-inline">
-                              <li class="list-inline-item">
-                                  <img alt="Avatar" class="table-avatar" src="{{ asset('images/sub_category/'.$sub_cat->image) }}">
-                              </li>
-                          </ul>
+                        <a>
+                        {{$user->email}}
+                        </a>
+                
                       </td>
                       <td class="project_progress">
-                              {{$sub_cat->category}}</>
+                              {{$user->user_type}}</>
                       </td>
                       <td class="project-state">
                           <span class="badge badge-success">Active</span>
                       </td>
                       <td class="project-actions text-right">
-                          <a class="btn btn-primary btn-sm" href="/admin/subcategory-details/{{$sub_cat->id}}">
+                          <a class="btn btn-primary btn-sm" href="/admin/subcategory-details/{{$user->id}}">
                               <i class="fas fa-eye">
                               </i>
                               <!-- View -->
                           </a>
-                          <a class="btn btn-info btn-sm" href="/admin/sub-category/{{$sub_cat->id}}">
+                          <!-- <a class="btn btn-info btn-sm" href="/admin/sub-category/{{$user->id}}">
                               <i class="fas fa-pencil-alt">
                               </i>
-                              <!-- Edit -->
-                          </a>
-                          <a class="btn btn-danger btn-sm" href="/admin/delete-subcategory/{{$sub_cat->id}}">
+                             
+                          </a> -->
+                          <a class="btn btn-danger btn-sm" href="/admin/delete-users/{{$user->id}}">
                               <i class="fas fa-trash">
                               </i>
                               <!-- Delete -->
