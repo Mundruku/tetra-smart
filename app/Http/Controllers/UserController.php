@@ -24,7 +24,20 @@ class UserController extends Controller
 
       foreach($categories as $cat){
          $subCategory = DB::select('SELECT * FROM sub_categories WHERE category_id = "'.$cat->id.'" ');
-         $cat->sub_category = $subCategory;
+         // $cat->sub_category = $subCategory;
+         // array_push($category, $cat);
+         // $temp_sub_cat = [];
+         $temp_sub_cat = [];
+         foreach($subCategory as $sub_cat){
+            $products = DB::select('SELECT* FROM products WHERE sub_category_id = "'.$sub_cat->id.'"');
+            $sub_cat->products = $products;
+            array_push($temp_sub_cat, $sub_cat);
+            // $sub_cat->products = $products;
+            // $cat->sub_category = $sub_cat;
+            // array_push($category, $cat);
+         }
+
+         $cat->sub_category = $temp_sub_cat;
          array_push($category, $cat);
       }
       // return $category;
