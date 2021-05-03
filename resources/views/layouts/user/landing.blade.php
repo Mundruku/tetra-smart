@@ -303,8 +303,13 @@
                                                             <div class="action">
                                                                 <button type="button" title="Add to Cart"
                                                                     class="button btn-cart"
-                                                                    onclick="setLocation('http://mas1.magikthemes.com/index.php/bolt/checkout/cart/add/uenc/aHR0cDovL21hczEubWFnaWt0aGVtZXMuY29tL2luZGV4LnBocC9ib2x0Lw,,/product/449/form_key/9jrz4Nr6N9xz7wgF/')"><span>Add
-                                                                        to Cart</span></button>
+                                                                     >
+                                                                    <a href="{{route('user.add.to.cart', ['id' => $product->id]) }}">
+                                                                    <span>Add
+                                                                        to Cart</span>
+                                                                        </a>
+                                                                        </button>
+                                                                        
                                                             </div>
                                                             <!--action-->
                                                         </div>

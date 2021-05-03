@@ -131,7 +131,7 @@ jQuery(document).ready(function() {
     <tr>
       <th scope="row">1</th>
       <td><img style="width:2%;"  src="{{$item['item']->picture_url}}"></img>{{$item['item']->product_name}}</td>
-      <td>Otto</td>
+      <td>{{$item['item']->purchase_price}}</td>
       <td><input name="qty" value="{{$item['qty']}}"></input></td>
       <td>{{$item['sub_price']}}</td>
     </tr>

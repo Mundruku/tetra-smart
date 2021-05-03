@@ -88,13 +88,21 @@ public function logout(Request $request){
     return redirect('/');
 }
 
+   //view cart items 
+
+   public function view_cart_items(Request $request){
+      return view('user.cart.index');
+   }
+
    //Adding to cart session
 
    public function add_to_cart(Request $request, $id){
       $product=Product::find($id);
       $existing_cart=$request->session()->has('cart') ? $request->session()->get('cart') : null;
-     
-       return view('user.cart.index');
+      $cart=new Cart($existing_cart);
+      $cart->add_to_cart($product, $product->id);
+      $request->session()->put('cart', $cart);
+      return redirect('/view-cart-items');
    }
 
    
