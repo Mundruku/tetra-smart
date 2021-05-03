@@ -20,16 +20,25 @@ class UserController extends Controller
 
    public function __construct()
     {
-       $category = [];
+      $category = [];
       $categories = Category::all();
 
       foreach($categories as $cat){
          $subCategory = DB::select('SELECT * FROM sub_categories WHERE category_id = "'.$cat->id.'" ');
-         $cat->sub_category = $subCategory;
+         $temp_sub_cat = [];
+         foreach($subCategory as $sub_cat){
+            $products = DB::select('SELECT* FROM products WHERE sub_category_id = "'.$sub_cat->id.'"');
+            $sub_cat->products = $products;
+            array_push($temp_sub_cat, $sub_cat);
+         }
+
+
+         $cat->sub_category = $temp_sub_cat;
          array_push($category, $cat);
       }
-
+      $category_products = DB::select('SELECT p.*, c.name  AS category FROM products p INNER JOIN categories c ON p.category_id = c.id');
        View::share( 'category', $category);
+       View::share( 'products', $category_products );
     }
     
    //welcome page
