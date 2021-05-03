@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\View;
 
 use Illuminate\Http\Request;
 use App\Models\User;
@@ -13,13 +14,13 @@ use App\Models\SubCategory;
 use Illuminate\Support\Facades\DB;
 use Session;
 
+
 class UserController extends Controller
 {
-    
-   //welcome page
 
-   public function welcome_page(Request $request){
-      $category = [];
+   public function __construct()
+    {
+       $category = [];
       $categories = Category::all();
 
       foreach($categories as $cat){
@@ -27,8 +28,16 @@ class UserController extends Controller
          $cat->sub_category = $subCategory;
          array_push($category, $cat);
       }
+
+       View::share( 'category', $category);
+    }
+    
+   //welcome page
+
+   public function welcome_page(Request $request){
+      
       // return $category;
-      return view('welcome')->with('category', $category);
+      return view('welcome');
    }
 
     //Show login form
@@ -74,13 +83,9 @@ public function logout(Request $request){
 
    public function add_to_cart(Request $request, $id){
       $product=Product::find($id);
-      $existing_cart=Session::has('cart')?Session::get('cart'):null;
-
-      $cart=new Cart($existing_cart);
-      $cart->add_to_cart($product, $product->id);
-
-      $request->session()->put('cart', $cart);
-       return view('welcome');
+      $existing_cart=$request->session()->has('cart') ? $request->session()->get('cart') : null;
+     
+       return view('user.cart.index');
    }
 
    

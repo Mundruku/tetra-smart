@@ -114,13 +114,13 @@ Route::get('user-login-form', [App\Http\Controllers\UserController::class, 'user
 Route::get('user-register-form', [App\Http\Controllers\UserController::class, 'user_register_form'])->name('user.register.form');
 
 
+Route::get('add-to-cart/{id}', [App\Http\Controllers\UserController::class, 'add_to_cart'])->name('user.add.to.cart');
+
 //Private routes for the user 
 Route::group(['middleware'=>['auth']], function(){
 
   Route::get('user/logout', [App\Http\Controllers\UserController::class, 'logout'])->name('user.logout');
 
-
-  Route::get('add-to-cart/{id}', [App\Http\Controllers\UserController::class, 'add_to_cart'])->name('user.add.to.cart');
     
 
 });
