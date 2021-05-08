@@ -246,7 +246,7 @@
                                             <div class="item-inner">
                                                 <div class="item-img">
                                                     <div class="item-img-info">
-                                                        <a class="product-image" href="vibe-k5-plus.html"
+                                                        <a class="product-image" href="product-details/{{$product->id}}"
                                                             title="{{$product->product_name}}">
                                                             <img src="{{$product->picture_url}}" class="img-responsive" alt="Vibe K5 Plus">
                                                             <!-- <img class="img-responsive"
