@@ -46,7 +46,7 @@
                                             @foreach ($sub_cat->products as $product) 
 
                                                  <li class="level2 nav-6-1-1">
-                                                     <a href="mob-smartphone/mob-samsung/galaxy-g7.html"><span>{{$product->product_name}}</span></a>
+                                                     <a href="product-details/{{$product->id}}"><span>{{$product->product_name}}</span></a>
                                            
                                                  </li>
                                             @endforeach

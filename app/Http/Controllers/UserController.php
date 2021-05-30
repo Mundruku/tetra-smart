@@ -117,7 +117,7 @@ public function view_product_details(Request $request, $id){
       INNER JOIN categories C ON P.category_id = C.id INNER JOIN sub_categories S ON P.sub_category_id = S.id WHERE P.id = "'.$id.'" ');
       // $product_details = $product_details[0];
       // return $product_details[0]->product_name;
-      return view('user.products.product_details');
+      return view('user.products.product_details')->with("product_details", $product_details);
 
 
 }
