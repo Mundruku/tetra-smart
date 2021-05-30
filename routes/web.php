@@ -117,6 +117,8 @@ Route::get('user-register-form', [App\Http\Controllers\UserController::class, 'u
 Route::get('add-to-cart/{id}', [App\Http\Controllers\UserController::class, 'add_to_cart'])->name('user.add.to.cart');
 
 Route::get('view-cart-items', [App\Http\Controllers\UserController::class, 'view_cart_items'])->name('cart.view');
+Route::get('product-details/{id}', [App\Http\Controllers\UserController::class, 'view_product_details'])->name('view.product.details');
+
 
 //Private routes for the user 
 Route::group(['middleware'=>['auth']], function(){

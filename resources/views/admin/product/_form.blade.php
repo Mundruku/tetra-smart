@@ -36,24 +36,6 @@
 
                 <div class="col-md-6">
                <div class="form-group">
-                  <label>Category</label>
-                  <select name="category" class="form-control select2" style="width: 100%;">
-                    @if($product!=null)
-                    <option  value="{{$product->category_id}}">{{$product->category_name}}</option>
-                    @endif
-                    @foreach ($categories as $category)
-                    @if($product!=null && $product->category_id!=$category->id)
-                    <option  value="{{$category->id}}">{{$category->name}}</option>
-                    @else
-                    <option  value="{{$category->id}}">{{$category->name}}</option>
-                    @endif
-                    @endforeach
-                  </select>
-                </div>
-                  </div>
-
-                <div class="col-md-6">
-               <div class="form-group">
                   <label>Sub Category</label>
                   <select name="sub_category" class="form-control select2" style="width: 100%;">
                      @if($product!=null)

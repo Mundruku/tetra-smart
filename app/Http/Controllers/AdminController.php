@@ -98,9 +98,10 @@ public function product_save(Request $request){
      
 	if($request->product_id){
         $product_to_edit=Product::find($request->product_id);
+        $category_id=SubCategory::find($request->sub_category);
 
         $product_to_edit->product_name=$request->product_name;
-        $product_to_edit->category_id=$request->category;
+        $product_to_edit->category_id=$category_id->category_id;
         $product_to_edit->sub_category_id=$request->sub_category;
         $product_to_edit->purchase_price=$request->purchase_price;
         
@@ -121,7 +122,6 @@ public function product_save(Request $request){
     */
     $validator = $request->validate([
         'product_name' => 'required',
-        'category' => 'required',
         'sub_category' => 'required',
         'picture' => 'required',
         'purchase_price'=>'required'
@@ -146,8 +146,10 @@ public function product_save(Request $request){
 
         $file_path_url = AdminController::web_url().'/images/products/'.$local_url;
 
+        $category_id=SubCategory::find($request->sub_category);
+
         $product->product_name=$request->product_name;
-        $product->category_id=$request->category;
+        $product->category_id=$category_id->category_id;
         $product->sub_category_id=$request->sub_category;
         $product->picture_url=$file_path_url;
         $product->purchase_price=$request->purchase_price;

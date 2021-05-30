@@ -105,5 +105,25 @@ public function logout(Request $request){
       return redirect('/view-cart-items');
    }
 
+
+// *************************************************************************************** bash cod
+
+public function view_product_details(Request $request, $id){
+
+        $product_details=Product::join('categories', 'products.category_id', '=', 'categories.id')
+        ->join('sub_categories', 'products.sub_category_id', '=', 'sub_categories.id')->select('sub_categories.name as sub_category_name',)->first();
+
+      $product_details = DB::select('SELECT p.*, C.name AS category_name,S.name AS sub_category_name FROM products P 
+      INNER JOIN categories C ON P.category_id = C.id INNER JOIN sub_categories S ON P.sub_category_id = S.id WHERE P.id = "'.$id.'" ');
+      // $product_details = $product_details[0];
+      // return $product_details[0]->product_name;
+      return view('user.products.product_details')->with("product_details", $product_details);
+
+
+}
+
+
+
+
    
 }
