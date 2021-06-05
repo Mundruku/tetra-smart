@@ -144,7 +144,7 @@
         </div><!--mm-toggle-wrap-->
         <div class="logo">
            <!-- For version 1 --> 
-            <a href="index.html" title="Magento Commerce" ><div><img style="width:35%;" src="{{ asset('user/images/tetra_smart5.png') }}" alt="Bolt Store" /></div></a>
+            <a href="/" title="Magento Commerce" ><div><img style="width:35%;" src="{{ asset('user/images/tetra_smart5.png') }}" alt="Bolt Store" /></div></a>
                   </div><!--logo-->
       </div><!--col-lg-6 col-md-4 col-sm-4 col-xs-12 logo-block-->
       <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
@@ -165,10 +165,9 @@
             <span class="price">My Cart / <span class="price">{{session()->get('cart')->total_price}}/=</span></span>  
             </a>  
             @else   
-            <a href="{{ route('admin.category') }}">  
-            <span class="cart_count">
+            <a href="{{ route('user.add.to.cart', ['id' => 1]) }}">  
+            <span class="cart_count"> 0</span>
             
-              0     </span>     
             <span class="price">My Cart / <span class="price">shs0.00/=</span></span>  
             </a>
             @endif

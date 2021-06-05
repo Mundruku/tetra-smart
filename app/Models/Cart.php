@@ -19,7 +19,7 @@ class Cart
  }
 
 public function add_to_cart($item, $id){
-$stored_item=['qty'=>0, 'sub_price'=>$item->price, 'unit_price'=>$item->price, 'item'=>$item];
+$stored_item=['qty'=>0, 'sub_price'=>$item->price, 'unit_price'=>$item->purchase_price, 'item'=>$item];
 if($this->items){
     if(array_key_exists($id, $this->items)){
         $stored_item=$this->items[$id];
@@ -27,10 +27,10 @@ if($this->items){
 }
 
   $stored_item['qty']++;
-  $stored_item['sub_price']=$item->price*$stored_item['qty'];
+  $stored_item['sub_price']=$item->purchase_price*$stored_item['qty'];
   $this->items[$id]=$stored_item;
   $this->total_qty++;
-  $this->total_price+=$item->price;
+  $this->total_price+=$item->purchase_price;
 
 }
 

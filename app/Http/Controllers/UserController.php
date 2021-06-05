@@ -123,6 +123,14 @@ public function view_product_details(Request $request, $id){
 }
 
 
+public function delete_cart(Request $request){
+   if($request->session()->exists('cart'))
+   {
+      $request->session()->forget('cart');
+      return redirect()->back();
+   }
+}
+
 
 
    
