@@ -149,7 +149,7 @@
               <td><a href="/" title="Micromax Canvas Juice 4G" class="product-image"><img src="{{$item['item']->picture_url}}" width="75" height="75" alt="Micromax Canvas Juice 4G" /></a></td>
               <td>
                 <h2 class="product-name">
-                  <a href="/">{{$item['item']->purchase_price}}</a>
+                  <a href="/">{{$item['item']->product_name}}</a>
                 </h2>
                 <!-- Code to display Magik Fee starts here -->
                 <!-- Code to display Magik Fee ends here -->
@@ -315,7 +315,7 @@
          
          <ul class="checkout">           
                                                                                 <li>
-    <button type="button" title="Proceed to Checkout" class="button btn-proceed-checkout" onclick="window.location='http://mas1.magikthemes.com/index.php/bolt/checkout/onepage/';"><span>Proceed to Checkout</span></button>
+    <button type="button" title="Proceed to Checkout" class="button btn-proceed-checkout" onclick="window.location='http://127.0.0.1:8000/checkout';"><span>Proceed to Checkout</span></button>
 </li><br />
                                                                                             <li><a href="http://mas1.magikthemes.com/index.php/bolt/checkout/multishipping/" title="Checkout with Multiple Addresses">Checkout with Multiple Addresses</a>
 </li><br />
