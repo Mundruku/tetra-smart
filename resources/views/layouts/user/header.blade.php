@@ -157,20 +157,20 @@
    <!-- For version 1,2 --> 
 
   <div class="basket"> 
-      <a href="{{ route('user.add.to.cart', ['id' => 1]) }}" >  
+      <a href="{{ route('cart.view') }}" >  
            @if(session()->has('cart'))           
-            <span class="cart_count">
-            
+            <span class="cart_count"> 
             {{ session()->get('cart')->total_qty }}           </span>     
             <span class="price">My Cart / <span class="price">{{session()->get('cart')->total_price}}/=</span></span>  
-            </a>  
+       
             @else   
-            <a href="{{ route('user.add.to.cart', ['id' => 1]) }}">  
+          
             <span class="cart_count"> 0</span>
             
             <span class="price">My Cart / <span class="price">shs0.00/=</span></span>  
-            </a>
+         
             @endif
+            </a>
       
   </div> <!-- basket -->
 

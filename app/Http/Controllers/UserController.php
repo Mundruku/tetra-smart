@@ -131,6 +131,10 @@ public function delete_cart(Request $request){
    }
 }
 
+public function checkout(Request $request){
+   return view('user.cart.checkout');
+}
+
 
 
    
