@@ -13,7 +13,7 @@
 
                          <!-- For version 1,2,3 -->
 
-                         <div class="dropdown block-language-wrapper">
+                         <!-- <div class="dropdown block-language-wrapper">
                              <a href="{{ route('logout') }}" class="block-language dropdown-toggle" data-target="#"
                                  data-toggle="dropdown" role="button"> <img
                                      src="{{ asset('user/images//flags/bolt.png') }}" alt="bolt" /> English <span
@@ -30,7 +30,7 @@
                                          <img src="{{ asset('user/images//flags/boltfr.png') }}" />
                                          French </a></li>
                              </ul>
-                         </div>
+                         </div> -->
                          <!--dropdown block-language-wrapper-->
 
                          <!-- End for version 4 -->
@@ -42,7 +42,7 @@
 
                          <!-- For version 1,2,3 -->
 
-                         <div class="dropdown block-currency-wrapper">
+                         <!-- <div class="dropdown block-currency-wrapper">
                              <a href="#" class="block-currency dropdown-toggle" data-target="#" data-toggle="dropdown"
                                  role="button"> USD <span class="caret"></span></a>
                              <ul role="menu" class="dropdown-menu">
@@ -59,13 +59,13 @@
                                          href="directory/currency/switch/currency/USD/uenc/aHR0cDovL21hczEubWFnaWt0aGVtZXMuY29tL2luZGV4LnBocC9ib2x0Lw%2c%2c/indexf670.html?___store=USD"
                                          tabindex="-1" role="menuitem" title="USD"> $ - USD</a></li>
                              </ul>
-                         </div>
+                         </div> -->
 
 
 
                          <!-- End for version 4 -->
                          @if (Auth::guest())
-                         <div class="welcome-msg">welcome to Tetrasmart!</div>
+                         <div class="welcome-msg">welcome to Tetrasmart</div>
                          @else
                          <div class="welcome-msg">welcome {{Auth::user()->name}}!</div>
                          @endif

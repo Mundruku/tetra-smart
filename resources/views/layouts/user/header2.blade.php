@@ -1,4 +1,4 @@
-<nav>
+<nav  > <!-- class="sticky-header" -->
      <div class="container">
          <div class="nav-inner">
 
@@ -7,7 +7,7 @@
              <!-- BEGIN NAV -->
              <ul id="nav" class="hidden-xs">
 
-                 <li id="nav-home1" class="level0 parent drop-menu"><a href="index.html"
+                 <li id="nav-home1" class="level0 parent drop-menu"><a href="/"
                          class="level-top active"><span>Home</span></a>
                      <!-- <ul class="level1" style="display: none;">
                          <li class="level1 parent"><a href="/"><span>Home</span></a></li>
@@ -22,7 +22,7 @@
 
 
 
-                     <a class="level-top" href="mob-smartphone.html"><span>{{$cat->name}}</span></a>
+                     <a class="level-top" href="{{ url('product-category', [$cat->id]) }}"><span>{{$cat->name}}</span></a>
 
 
                      <div class="level0-wrapper dropdown-6col" style="left: 0px; display: none;">
@@ -46,7 +46,7 @@
                                             @foreach ($sub_cat->products as $product) 
 
                                                  <li class="level2 nav-6-1-1">
-                                                     <a href="product-details/{{$product->id}}"><span>{{$product->product_name}}</span></a>
+                                                     <a href=" {{ url('product-details', [$product->id]) }}"><span>{{$product->product_name}}</span></a>
                                            
                                                  </li>
                                             @endforeach

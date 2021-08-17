@@ -106,7 +106,7 @@ public function logout(Request $request){
    }
 
 
-// *************************************************************************************** bash cod
+// *************************************************************************************** bash code ************************
 
 public function view_product_details(Request $request, $id){
 
@@ -133,6 +133,12 @@ public function delete_cart(Request $request){
 
 public function checkout(Request $request){
    return view('user.cart.checkout');
+}
+
+public function products_under_category(Request $request, $id){
+   $category_products = DB::select('SELECT p.*, c.name as category_name, c.image FROM products p INNER JOIN categories c ON c.id = p.category_id WHERE c.id = '.$id);
+   $current_category = Category::find($id);
+   return view('user.products.product_categories')->with("category_products", $category_products)->with("current_category", $current_category);
 }
 
 

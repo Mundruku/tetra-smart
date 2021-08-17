@@ -119,6 +119,7 @@ Route::get('add-to-cart/{id}', [App\Http\Controllers\UserController::class, 'add
 Route::get('view-cart-items', [App\Http\Controllers\UserController::class, 'view_cart_items'])->name('cart.view');
 Route::get('product-details/{id}', [App\Http\Controllers\UserController::class, 'view_product_details'])->name('view.product.details');
 Route::get('checkout', [App\Http\Controllers\UserController::class, 'checkout'])->name('checkout');
+Route::get('product-category/{id}', [App\Http\Controllers\UserController::class, 'products_under_category'])->name('products_under_category');
 
 //Private routes for the user 
 Route::group(['middleware'=>['auth']], function(){
