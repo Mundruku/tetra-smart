@@ -106,7 +106,7 @@ public function logout(Request $request){
    }
 
 
-// *************************************************************************************** bash cod
+// *************************************************************************************** bash code ************************
 
 public function view_product_details(Request $request, $id){
 
@@ -134,6 +134,33 @@ public function delete_cart(Request $request){
 public function checkout(Request $request){
    return view('user.cart.checkout');
 }
+
+public function products_under_category(Request $request, $id){
+   $category_products = DB::select('SELECT p.*, c.name as category_name, c.image FROM products p INNER JOIN categories c ON c.id = p.category_id WHERE c.id = '.$id);
+   $total_category_products = DB::select('SELECT *, (SELECT COUNT(p.id) FROM products p WHERE p.category_id = c.id) as total_products  FROM categories c ORDER BY total_products DESC');
+   $current_category = Category::find($id);
+
+   return view('user.products.product_categories')
+   ->with("category_products", $category_products)
+   ->with("current_category", $current_category)
+   ->with("total_category_products", $total_category_products);
+}
+
+   public function products_under_sub_category(Request $request, $id){
+
+      $sub_category_products = DB::select('SELECT p.*, c.name as sub_category_name, c.image FROM products p INNER JOIN sub_categories c ON c.id = p.sub_category_id WHERE c.id = '.$id);
+      $total_category_products = DB::select('SELECT *, (SELECT COUNT(p.id) FROM products p WHERE p.sub_category_id = c.id) as total_products  FROM sub_categories c ORDER BY total_products DESC');
+      $current_sub_category = SubCategory::find($id);
+
+      return view('user.products.product_sub_category')
+      ->with("sub_category_products", $sub_category_products)
+      ->with("total_category_products", $total_category_products)
+      ->with("current_sub_category", $current_sub_category);
+
+   }
+
+
+
 
 
 
