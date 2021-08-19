@@ -39,7 +39,7 @@
                                      @foreach ($cat->sub_category as $sub_cat) 
                                          <li class="level3 nav-6-1 parent item">
 
-                                             <a href="mob-smartphone/mob-samsung.html"><span>{{$sub_cat->name}}</span></a>
+                                             <a href="{{url('product-sub-category', [$sub_cat->id])}}"><span>{{$sub_cat->name}}</span></a>
                                              <!--sub sub category-->
 
                                              <ul class="level1">

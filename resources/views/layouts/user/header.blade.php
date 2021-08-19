@@ -74,16 +74,16 @@
                      <div class="col-xs-6 hidden-xs">
                          <div class="toplinks">
                              <div class="links">
-                                 <div class="myaccount"><a href="customer/account/index.html" title="My Account"><span
-                                             class="hidden-xs">My Account</span></a></div>
-                                 <div class="check"><a href="checkout/onepage/index.html" title="Checkout">
+                                 <!-- <div class="myaccount"><a href="customer/account/index.html" title="My Account"><span
+                                             class="hidden-xs">My Account</span></a></div> -->
+                                 <!-- <div class="check"><a href="checkout/onepage/index.html" title="Checkout">
                                          <span class="hidden-xs">Checkout</span></a>
-                                 </div>
-                                 <div class="demo"><a href="blog.html" title="Blog"><span
-                                             class="hidden-xs">Blog</span></a></div>
+                                 </div> -->
+                                 <!-- <div class="demo"><a href="blog.html" title="Blog"><span
+                                             class="hidden-xs">Blog</span></a></div> -->
 
                                  <!-- Header Company -->
-                                 <div class="dropdown block-company-wrapper hidden-xs"> <a href="#"
+                                 <!-- <div class="dropdown block-company-wrapper hidden-xs"> <a href="#"
                                          class="block-company dropdown-toggle" data-target="#" data-toggle="dropdown"
                                          role="button"> Company <span class="caret"></span></a>
                                      <ul class="dropdown-menu">
@@ -100,7 +100,7 @@
                                          <li role="presentation"><a title="Advanced Search"
                                                  href="catalogsearch/advanced/index.html">Advanced Search </a></li>
                                      </ul>
-                                 </div>
+                                 </div> -->
                                  <!-- End Header Company -->
                                  @if (Auth::guest())
                                  <div class="login"><a href="{{ route('user.login.form') }}" title="Log In"><span
@@ -137,8 +137,7 @@
 
                              <div class="search-box">
                                  <form id="search_mini_form"
-                                     action="http://mas1.magikthemes.com/index.php/bolt/catalogsearch/result/"
-                                     method="get">
+                                   
 
 
                                      <!-- Autocomplete End code -->
@@ -147,7 +146,7 @@
                                      <button type="submit" title="Search" class="search-btn-bg" id="submit-button"><span
                                              class="glyphicon glyphicon-search"></span>&nbsp;</button>
                                      <div id="search_autocomplete" class="search-autocomplete"></div>
-                                     <script type="text/javascript">
+                                     <!-- <script type="text/javascript">
                                      var searchForm = new Varien.searchForm('search_mini_form', 'search',
                                          'Search entire store here...');
                                      $j('html').click(function() {
@@ -172,7 +171,7 @@
                                          }
 
                                      });
-                                     </script>
+                                     </script> -->
                                  </form>
                              </div>
                              <!--search-box-->

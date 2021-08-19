@@ -99,18 +99,18 @@
                         <div class="item-inner">
                             <div class="item-img">
                                 <div class="item-img-info">
-                                    <a class="product-image" href="delbard-roses.html" title="Delbard"><img
+                                    <a class="product-image" href="#" title="Delbard"><img
                                             class="img-responsive" alt="Delbard"
                                             src="../../media/catalog/product/cache/69/small_image/9df78eab33525d08d6e5fb8d27136e95/p/r/product3_11_1_1.jpg"></a>
                                     <div class="box-hover">
                                         <ul class="add-to-links">
 
-                                            <li><a rel="nofollow" href="quickview/index/view5a6a.html?prodid=428"
+                                            <li><a rel="nofollow" href="#"
                                                     data-fancybox-type="iframe"
                                                     class="magik-btn-quickview link-quickview">Quick View</a></li>
-                                            <li><a href="wishlist/index/add/product/428/form_key/9jrz4Nr6N9xz7wgF/index.html"
+                                            <li><a href="#"
                                                     class="link-wishlist" title="Add to Wishlist">Wishlist</a></li>
-                                            <li><a href="catalog/product_compare/add/product/428/uenc/aHR0cDovL21hczEubWFnaWt0aGVtZXMuY29tL2luZGV4LnBocC9ib2x0Lw%2c%2c/form_key/9jrz4Nr6N9xz7wgF/index.html"
+                                            <li><a href="#"
                                                     class="link-compare" title="Add to Compare">Compare</a></li>
                                         </ul>
                                         <!--add-to-links-->
@@ -135,7 +135,7 @@
                             <div class="item-info">
                                 <div class="info-inner">
                                     <div class="item-title">
-                                        <a href="delbard-roses.html" title="Delbard">
+                                        <a href="#" title="Delbard">
                                             Delbard </a>
                                     </div>
                                     <!--item-title-->
@@ -261,7 +261,7 @@
                                                                         data-fancybox-type="iframe"
                                                                         class="magik-btn-quickview link-quickview">Quick
                                                                         View</a></li> -->
-                                                                <li><a href="wishlist/index/add/product/449/form_key/9jrz4Nr6N9xz7wgF/index.html"
+                                                                <li><a href="#"
                                                                         class="link-wishlist"
                                                                         title="Add to Wishlist">Wishlist</a></li>
                                                                 <!-- <li><a href="catalog/product_compare/add/product/449/uenc/aHR0cDovL21hczEubWFnaWt0aGVtZXMuY29tL2luZGV4LnBocC9ib2x0Lw%2c%2c/form_key/9jrz4Nr6N9xz7wgF/index.html"

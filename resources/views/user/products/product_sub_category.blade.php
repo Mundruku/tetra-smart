@@ -114,11 +114,12 @@ jQuery(document).ready(function() {
                     <div class="col-xs-12">
                         <ul>
                             <li class="home">
-                            <a href="{{url('/')}}" title="Go to Home Page">Home</a>
+                                <a href="{{url('/')}}" title="Go to Home Page">Home</a>
+
                                 <span>/ </span>
                             </li>
                             <li class="category2022">
-                                <strong>{{$current_category->name}}</strong>
+                                <strong>{{$current_sub_category->name}}</strong>
                             </li>
                         </ul>
                     </div>
@@ -190,7 +191,7 @@ jQuery(document).ready(function() {
 
                             <!-- Not For version 3, 4 -->
                             <h2 class="page-heading">
-                                <span class="page-heading-title">{{$current_category->name}}</span>
+                                <span class="page-heading-title">{{$current_sub_category->name}}</span>
                             </h2>
                             <!--page-heading-->
                             <!-- Not For version 3, 4 -->
@@ -204,16 +205,16 @@ jQuery(document).ready(function() {
                                 <ol class="products-list" id="products-list">
 
                                 
-                                @foreach ($category_products as $cat_prod) 
+                                @foreach ($sub_category_products as $sub_cat_prod) 
                                     <li class="item odd">
                                         <!-- BEGIN PRODUCT IMAGE -->
                                         <div class="product-image">
 
-                                            <a href="{{ url('product-details', [$cat_prod->id]) }}"
-                                                title="{{$cat_prod->product_name}}">
-                                                <img id="{{$cat_prod->picture_url}}"
-                                                    src="{{$cat_prod->picture_url}}"
-                                                    alt="{{$cat_prod->product_name}}">
+                                            <a href="{{ url('product-details', [$sub_cat_prod->id]) }}"
+                                                title="{{$sub_cat_prod->product_name}}">
+                                                <img id="{{$sub_cat_prod->picture_url}}"
+                                                    src="{{$sub_cat_prod->picture_url}}"
+                                                    alt="{{$sub_cat_prod->product_name}}">
                                             </a>
 
                                         </div>
@@ -221,8 +222,8 @@ jQuery(document).ready(function() {
                                         <!-- BEGIN PRODUCT SHOP -->
                                         <div class="product-shop">
                                             <h2 class="product-name">
-                                                <a href="{{ url('product-details', [$cat_prod->id]) }}"
-                                                    title="{{$cat_prod->product_name}}">{{$cat_prod->product_name}}</a>
+                                                <a href="{{ url('product-details', [$sub_cat_prod->id]) }}"
+                                                    title="{{$sub_cat_prod->product_name}}">{{$sub_cat_prod->product_name}}</a>
                                             </h2>
 
                                             <div class="ratings">
@@ -245,14 +246,14 @@ jQuery(document).ready(function() {
 
                                             <div class="price-box">
                                                 <span class="regular-price">
-                                                    <span class="price">UGX {{$cat_prod->purchase_price}}</span> </span>
+                                                    <span class="price">UGX {{$sub_cat_prod->purchase_price}}</span> </span>
 
                                             </div>
 
                                             <!-- BEGIN ACTIONS -->
                                             <div class="actions">
                                                 <span class="add-to-links">
-                                                    <a href="{{route('user.add.to.cart', ['id' => $cat_prod->id]) }}"
+                                                    <a href="{{route('user.add.to.cart', ['id' => $sub_cat_prod->id]) }}"
                                                         class="button btn-cart" title="Add to cart"><span>Add to
                                                             Cart</span></a>
                                                 </span>
@@ -287,11 +288,11 @@ jQuery(document).ready(function() {
                                     <dt class="last even">Category</dt>
                                     <dd class="last even">
                                         <ol>
-                                        @foreach ($total_category_products as $total_cat_prod) 
+                                        @foreach ($total_category_products as $total_sub_cat_prod) 
                                             <li>
                                                 <a
-                                                    href="{{ url('product-category', [$total_cat_prod->id]) }}">{{$total_cat_prod->name}}</a>
-                                                ({{$total_cat_prod->total_products}})
+                                                    href="{{ url('product-category', [$total_sub_cat_prod->id]) }}">{{$total_sub_cat_prod->name}}</a>
+                                                ({{$total_sub_cat_prod->total_products}})
                                             </li>
                                         @endforeach
                                   

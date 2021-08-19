@@ -111,51 +111,15 @@ jQuery(document).ready(function() {
  <div class="row">
   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
    <div class="blog-outer-container">
-    <div class="new_title">
+    <!-- <div class="new_title">
       <h2>Latest Blog</h2>
-    </div><!-- new_title -->
+    </div>new_title -->
    
     <div class="blog-inner">
       
        <!-- For version 1 --> 
         
 
-                   <div class="col-lg-6 col-md-6 col-sm-6 blog-preview_item">
-                               
-                                                                                                                              <div class="entry-thumb image-hover2">
-                                                 <a href="dolor-mobile-shop-lorem-various-ipsum.html"> <img src="{{asset('user/wysiwyg/bolt1-blog-img2.jpg')}}" alt="blog image" /> </a>                                                
-                                              </div> <!--entry-thumb image-hover2-->                                                                                         
-                                                                                      <div class="blog-preview_info">
-                                                <ul class="post-meta">
-                                                                                                    <li><i class="fa fa-user"></i>posted by Admin </li>
-                                                                                                     <li><i class="fa fa-comments"></i>1 comments</li>
-                                                  <li><i class="fa fa-calendar"></i><time class="entry-date" datetime="2017-07-25T06:02:29+00:00">25 Jul</time></li>
-                                                </ul><!--post-meta-->
-                                                <h4 class="blog-preview_title"><a href="dolor-mobile-shop-lorem-various-ipsum.html">Dolor Mobile Shop lorem various ipsum</a></h4>
-                                                <div class="blog-preview_desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry</div>
-                                                <a class="blog-preview_btn" href="dolor-mobile-shop-lorem-various-ipsum.html">Read More</a> 
-                                              </div><!--blog-preview_info-->
-                              </div><!--col-lg-6 col-md-6 col-sm-6 blog-preview_item-->                                                                       
-          
-          
-
-                   <div class="col-lg-6 col-md-6 col-sm-6 blog-preview_item">
-                               
-                                                                                                                              <div class="entry-thumb image-hover2">
-                                                 <a href="pellentesque-mobiles-habitant-morbi.html"> <img src="{{asset('user/wysiwyg/bolt1-blog-img1.jpg')}}" /> </a>                                                
-                                              </div> <!--entry-thumb image-hover2-->                                                                                         
-                                                                                      <div class="blog-preview_info">
-                                                <ul class="post-meta">
-                                                                                                    <li><i class="fa fa-user"></i>posted by Admin </li>
-                                                                                                     <li><i class="fa fa-comments"></i>0 comments</li>
-                                                  <li><i class="fa fa-calendar"></i><time class="entry-date" datetime="2017-07-25T06:00:59+00:00">25 Jul</time></li>
-                                                </ul><!--post-meta-->
-                                                <h4 class="blog-preview_title"><a href="pellentesque-mobiles-habitant-morbi.html">Pellentesque Mobiles habitant morbi</a></h4>
-                                                <div class="blog-preview_desc">Pellentesque habitant morbi tristique senectus et netus et ac turpis egestas morbi tristique.</div>
-                                                <a class="blog-preview_btn" href="pellentesque-mobiles-habitant-morbi.html">Read More</a> 
-                                              </div><!--blog-preview_info-->
-                              </div><!--col-lg-6 col-md-6 col-sm-6 blog-preview_item-->                                                                       
-          
           
        <!-- End for v2 -->
  
