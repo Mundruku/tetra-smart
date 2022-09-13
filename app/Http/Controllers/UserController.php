@@ -148,7 +148,7 @@ public function products_under_category(Request $request, $id){
 
    public function products_under_sub_category(Request $request, $id){
 
-      $sub_category_products = DB::select('SELECT p.*, c.name as sub_category_name, c.image FROM products p INNER JOIN sub_categories c ON c.id = p.sub_category_id WHERE c.id = '.$id);
+      $sub_category_products = DB::select('SELECT p.*, c.name as sub_category_name, c.image FROM products p INNER JOIN sub_categories c ON c.id = p.sub_category_id WHERE c.id = '.intval($id));
       $total_category_products = DB::select('SELECT *, (SELECT COUNT(p.id) FROM products p WHERE p.sub_category_id = c.id) as total_products  FROM sub_categories c ORDER BY total_products DESC');
       $current_sub_category = SubCategory::find($id);
 
